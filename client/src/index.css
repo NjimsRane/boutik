@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .active{
+        color:#3056D3;
+    }
+    .link {
+        color:#090E34;
+        transition:  all 0.5s ease;
+    }   
+    .link:hover{
+        color:#3056D3;
+    }
+
+    button{
+        background-color:#3056D3;
+        width:14rem;
+        color:#fff;
+        font-weight:bold;
+        text-transform: capitalize;
+        padding-block:0.7rem;
+        border-radius:3px;
+        font-size:1.6rem;
+        transition:all 0.5s ease;
+    }
+
+    button:hover{
+        background-color:rgba(0, 10, 42, 0.7);
+    }
+
+    .hero{
+        grid-template-areas: 
+            'hero1'
+            'hero2'
+        ;
+    }   
+
+    @media screen and (min-width:900px) {
+        .hero{
+            grid-template-areas:
+                'hero1 hero1 hero2'
+            ;
+        }
+    } 
+    .hero1{
+        grid-area:hero1;
+    }
+    .hero2{
+        grid-area:hero2;
+    }
+
+}
+
+
+
+
+
+
