@@ -3,8 +3,8 @@ import {
     RouterProvider, 
     Outlet
 } from 'react-router-dom'
-import { Accessories, Contact, Home, Products, Shop } from './pages'
-import { Footer, Header } from './layouts'
+import { Accessories, Contact, Home, Products, Shop ,Blog, Error } from './pages'
+import { Footer, Header, Services } from './layouts'
 
 
 const App = () => {
@@ -14,6 +14,7 @@ const App = () => {
       <>
         <Header />
         <Outlet />
+        <Services />
         <Footer />
       </>
     )
@@ -44,11 +45,19 @@ const App = () => {
             path:'/accessories',
            element:<Accessories />
           },
+          {
+            path:'/blog',
+           element:<Blog />
+          },
           // {
           //   path:'/error',
           //  element:<Er />
           // },
         ]
+      },
+      {
+        path:'*',
+        element:<Error />
       }
       
     ]

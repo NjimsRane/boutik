@@ -29,6 +29,13 @@ const Menu = ()=>{
           :'link'
         }
       >products</NavLink>
+      <NavLink to='/blog'
+        className={({isActive})=>
+        isActive 
+          ? 'active'
+          :'link'
+        }
+      >blog</NavLink>
       <NavLink to='/accessories'
         className={({isActive})=>
         isActive 

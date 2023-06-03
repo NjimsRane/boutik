@@ -3,14 +3,15 @@
 @tailwind utilities;
 
 @layer components{
-    .active{
+   .active{
         color:#3056D3;
     }
     .link {
         color:#090E34;
-        transition:  all 0.5s ease;
+        transition: all 0.5s ease;
     }   
-    .link:hover{
+    .link:hover,
+    .footerLink a:hover{
         color:#3056D3;
     }
 
@@ -28,6 +29,10 @@
 
     button:hover{
         background-color:rgba(0, 10, 42, 0.7);
+    }
+
+    .brands{
+         animation:slides 20s linear infinite ;
     }
 
     .hero{
@@ -51,10 +56,124 @@
         grid-area:hero2;
     }
 
+    .gallery{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:2rem;
+        grid-template-areas:
+            'gal1'
+            'gal2'
+            'gal3'
+            'gal4'
+            'gal5'
+            'gal6'
+            'gal7'
+        ;
+    }
+    .footerLink{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:1rem;
+    }
+    .footerLink a{
+        text-transform: capitalize;
+        color:#637381;
+        font-weight: 600;
+        font-size:1.5rem;
+        transition: all 0.5s ease;
+    }
+    @media screen and (min-width:700px) {
+        .gallery{
+            grid-template-columns:repeat(2,1fr);
+            grid-template-areas: 
+                'gal1 gal1'
+                'gal7 gal6'
+                'gal2 gal2'
+                'gal3 gal5'
+                'gal4 gal4'
+            ;
+        }
+    }
+    @media screen and (min-width:900px) {
+        .gallery{
+            grid-template-columns:repeat(3,1fr);
+            grid-template-areas: 
+                'gal1 gal2 gal2'
+                'gal3 gal3 gal4'
+                'gal7 gal5 gal6'
+            ;
+        }
+    }
+
 }
 
 
 
+/* animation brands */
+@keyframes slides {
+    0%{
+        left: 0;
+    }
+    100%{
+        left:-100%;
+    }
+}
 
 
+/*  reveal  */
+.left{
+    transform:translateX(-150px);
+    opacity:0;
+    transition:all 1s ease;
+}
+
+.left.active{
+    transform:translateX(0);
+    opacity:1;
+}
+.right{
+    transform:translateX(150px);
+    opacity:0;
+    transition:all 1s ease;
+}
+
+.right.active{
+    transform:translateX(0);
+    opacity:1;
+}
+
+/* gallery */
+
+/* grid area */
+.gal1{
+    grid-area: gal1;
+}
+.gal2{
+    grid-area: gal2;
+}
+.gal3{
+    grid-area: gal3;
+}
+.gal4{
+    grid-area: gal4;
+    
+}
+.gal5{
+    grid-area: gal5;
+}
+.gal6{
+    grid-area: gal6;
+}
+.gal7{
+    grid-area: gal7;
+}
+.toTop{
+    transform:translateY(150px);
+    opacity:0;
+    transition:all 1s ease;
+}
+.toTop.active{
+    transform:translateY(0);
+    opacity:1;
+}
 

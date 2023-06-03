@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 const HomeProduct = () => {
   return (
     <div >
-        <div className='w-full  relative '>
+        <div className='w-full  relative'>
             <img src={bag} alt="" className='w-full object-cover'/>
             <span className='bg-[crimson] w-20 text-[1.6rem] font-medium flex items-center justify-center py-[0.2rem] capitalize rounded text-white absolute top-6 left-6'>hot</span>
         </div>

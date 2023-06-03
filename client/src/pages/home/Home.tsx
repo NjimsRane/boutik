@@ -1,9 +1,10 @@
-import { Hero, HomeProducts } from "../../components"
+import { Brands, Hero, HomeProducts } from "../../components"
 
 const Home = () => {
   return (
-    <main className="px-16 md:px-20 lg:px-36">
+    <main className="flex flex-col gap-8">
        <Hero />
+       <Brands />
        <HomeProducts />
     </main>
   )

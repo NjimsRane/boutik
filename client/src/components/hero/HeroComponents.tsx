@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 
 const HeroComponents = ({img1,title,subtitle, link}) => {
     return (
-        <div className="bg-cover bg-center h-[20rem] md:h-[22rem] lg:h-[25rem] w-[full] relative"
+        <div className="bg-cover bg-center h-[20rem] md:h-[22rem] lg:h-[26.2rem] w-[full] relative"
         style={{
           backgroundImage:`url(${img1})`
         }}
