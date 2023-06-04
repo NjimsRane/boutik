@@ -64,7 +64,7 @@ const Navbar = () => {
   }
 
 
-  const {openCart,cartQuantity} = useShoppingCart();
+  const {cartQuantity} = useShoppingCart();
   return (
     <nav className="relative flex justify-between items-center  gap-4 px-16 py-8 md:px-20 lg:px-36 shadow bg-white">
       <div className="flex justify-between items-center w-full" >
