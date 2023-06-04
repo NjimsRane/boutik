@@ -82,7 +82,7 @@ const Navbar = () => {
               }
           </div>
       </div>  
-      <button onClick={openCart} className='relative block' >
+      <button className = 'relative block' >
         <GiShoppingCart size={28} color='#637381' />
           {cartQuantity > 0 && (
              <span className='absolute bottom-0  bg-[crimson] h-8 w-8 rounded-full text-white flex justify-center items-center right-0 translate-x-[25%] translate-y-[25%] text-sm'>{cartQuantity}</span>
