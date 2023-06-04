@@ -2,72 +2,174 @@
   {
      "category": "mobiles",
       "lists":[
-       {
-         "companyName" : "samsung",
-         "modelName" : "s8+",
-         "warranty" : "2 years",
-         "price" : 45000
-       }, 
-       {
-         "companyName" : "samsung",
-         "modelName" : "s8+",
-         "warranty" : "2 years",
-         "price" : 45000
-       },
-       {
-         "companyName" : "samsung",
-         "modelName" : "s8+",
-         "warranty" : "2 years",
-         "price" : 45000
-       }
-      ]
-  },
-  {
-  "category": "books",
-     "lists":[
-       {
-         "bookTag" : "java",
-         "bookName" : "the complete reference",
-         "authorName" : "herbert shildit",
-         "edition" : "2016",
-         "price" : 450
-       }, 
-       {
-         "bookTag" : "dataStructure",
-         "bookName" : "getting started with data structure",
-         "authorName" : "adam kooper",
-         "edition" : "2017",
-         "price" : 500
-       },
-       {
-         "bookTag" : "javascript",
-         "bookName" : "javascript :novice to ninja",
-         "authorName" : "herbert shildit",
-         "edition" : "2016",
-         "price" : 350
-       }
-      ]
-  },
-  {
-  "category": "shoes",
-     "lists":[
-       {
+        {
+         "id":7,
          "companyName" : "nike",
          "color" : "white",
          "type" : "casual",
-         "price" : 4500
+         "price" : 4500,
+         "imgUrl":"/images/shoes/15.jpg"
        }, 
        {
-         "companyName" : "adidas",
-         "color" : "brown",
-         "type" : "sports",
-         "price" : 4300
-       },
+         "id":8,
+         "companyName" : "nike",
+         "color" : "white",
+         "type" : "casual",
+         "price" : 4500,
+         "imgUrl":"/images/shoes/12.jpg"
+       }, 
        {
-         "companyName" : "sparks",
-         "color" : "blue",
-         "type" : "sports",
-         "price" : 3000
+         "id":9,
+         "companyName" : "nike",
+         "color" : "white",
+         "type" : "casual",
+         "price" : 4500,
+         "imgUrl":"/images/shoes/10.jpg"
+       }
+      ]
+  },
+  {
+  "category": "watches",
+     "lists":[
+        {
+         "id":4,
+         "companyName" : "rolex",
+         "color" : "silver",
+         "type" : "casual",
+         "price" : 4500,
+         "imgUrl":"/images/watches/1.jpg"
+       }, 
+       {
+         "id":5,
+         "companyName" : "nike",
+         "color" : "white",
+         "type" : "casual",
+         "price" : 4500,
+         "imgUrl":"/images/shoes/15.jpg"
+       }, 
+       {
+         "id":6,
+         "companyName" : "nike",
+         "color" : "white",
+         "type" : "casual",
+         "price" : 4500,
+         "imgUrl":"/images/shoes/15.jpg"
+       }
+      ]
+  },
+  {
+  "category": "jacket",
+     "lists":[
+       {
+         "id":1,
+         "companyName" : "zara",
+         "color" : "white",
+         "type" : "casual",
+         "price" : 4500,
+         "imgUrl":"/images/jackets/j2.jpg"
+       }, 
+       {
+         "id":2,
+         "companyName" : "nike",
+         "color" : "white",
+         "type" : "casual",
+         "price" : 4500,
+         "imgUrl":"/images/shoes/15.jpg"
+       }, 
+       {
+         "id":3,
+         "companyName" : "nike",
+         "color" : "white",
+         "type" : "casual",
+         "price" : 4500,
+         "umgUrl":"/images/shoes/15.jpg"
+       }
+      ]
+  },
+  {
+  "category": "pull",
+     "lists":[
+       {
+         "id":1,
+         "companyName" : "channel",
+         "color" : "white",
+         "type" : "casual",
+         "price" : 4500,
+         "imgUrl":"/images/pull/b2.jpg"
+       }, 
+       {
+         "id":2,
+         "companyName" : "nike",
+         "color" : "white",
+         "type" : "casual",
+         "price" : 4500,
+         "imgUrl":"/images/shoes/15.jpg"
+       }, 
+       {
+         "id":3,
+         "companyName" : "nike",
+         "color" : "white",
+         "type" : "casual",
+         "price" : 4500,
+         "umgUrl":"/images/shoes/15.jpg"
+       }
+      ]
+  },
+  {
+  "category": "trausers",
+     "lists":[
+       {
+         "id":1,
+         "companyName" : "gucci",
+         "color" : "white",
+         "type" : "casual",
+         "price" : 4500,
+         "imgUrl":"/images/pants/p2.jpg"
+       }, 
+       {
+         "id":2,
+         "companyName" : "nike",
+         "color" : "white",
+         "type" : "casual",
+         "price" : 4500,
+         "imgUrl":"/images/shoes/15.jpg"
+       }, 
+       {
+         "id":3,
+         "companyName" : "nike",
+         "color" : "white",
+         "type" : "casual",
+         "price" : 4500,
+         "umgUrl":"/images/shoes/15.jpg"
+       }
+      ]
+  },
+  {
+  "category": "shirt",
+     "lists":[
+       {
+         "id":1,
+         "companyName" : "D&G",
+         "color" : "white",
+         "type" : "casual",
+         "price" : 4500,
+         "imgUrl":"/images/shirts/f2.jpg"
+       }, 
+       {
+         "id":2,
+         "companyName" : "nike",
+         "color" : "white",
+         "type" : "casual",
+         "price" : 4500,
+         "imgUrl":"/images/shoes/15.jpg"
+       }, 
+       {
+         "id":3,
+         "companyName" : "nike",
+         "color" : "white",
+         "type" : "casual",
+         "price" : 4500,
+         "umgUrl":"/images/shoes/15.jpg"
        }
       ]
   }

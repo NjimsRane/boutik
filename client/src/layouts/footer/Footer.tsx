@@ -63,7 +63,7 @@ const Footer = () => {
       </div>
      <hr className="border border-[#637381] w-full" />
       <div className="px-16 md:px-20 lg:px-36 ">
-        <div className="flex flex-col gap-8 md:flex-row md:justify-between md:items-center mt-4">
+        <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center mt-4">
           <div className="flex items-center justify-center gap-4">
                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                   <img src={facebook} alt="facebook" className="w-8"  />

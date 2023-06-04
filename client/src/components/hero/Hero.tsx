@@ -14,7 +14,7 @@ const Hero = () => {
             <Link className="hover:text-[#3056D3] text-[#090E34]" to='/shop'>Mega Sale Up To 50% <br /> Off For All</Link>
           </h1>
           <p className="text-xl text-[#637381] lg:text-2xl font-medium md:w-[50ch]"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque expedita, nostrum ipsa alias aperiam itaque blanditiis totam odio molestiae vel nihil vitae consequuntur enim quos. Atque voluptatibus hic dignissimos minima?</p>
-          <button>
+          <button className="btn">
             <Link to='/' >
               shop now
             </Link>

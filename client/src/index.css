@@ -15,7 +15,7 @@
         color:#3056D3;
     }
 
-    button{
+    .btn{
         background-color:#3056D3;
         width:14rem;
         color:#fff;
@@ -27,8 +27,8 @@
         transition:all 0.5s ease;
     }
 
-    button:hover{
-        background-color:rgba(0, 10, 42, 0.7);
+    .btn:hover{
+        background-color:#212B36;
     }
 
     .brands{
@@ -54,6 +54,14 @@
     }
     .hero2{
         grid-area:hero2;
+    }
+
+    /* home product */
+    .homeProduct{
+        margin-block:2rem;
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(min(100%,26rem),1fr));
+        gap:2rem;
     }
 
     .gallery{

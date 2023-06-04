@@ -4,6 +4,7 @@ import {RxHamburgerMenu} from 'react-icons/rx'
 import {GiShoppingCart} from 'react-icons/gi'
 import {AiOutlineClose} from 'react-icons/ai'
 import { useState } from 'react'
+import {  useShoppingCart } from '../../context/ProductContext'
 
 const Menu = ()=>{
   return(
@@ -63,6 +64,7 @@ const Navbar = () => {
   }
 
 
+  const {openCart,cartQuantity} = useShoppingCart();
   return (
     <nav className="flex justify-between items-center relative gap-4 px-16 py-8 md:px-20 lg:px-36 shadow bg-white">
       <div className="flex justify-between items-center w-full" >
@@ -79,13 +81,13 @@ const Navbar = () => {
                 : <RxHamburgerMenu size={28} color='#637381' className='cursor-pointer' onClick={hangleToggle} />
               }
           </div>
-      </div>
-
-        <div className='relative'>
-          <GiShoppingCart size={28} color='#637381' />
-          <div className='absolute bottom-0  bg-[crimson] h-8 w-8 rounded-full text-white flex justify-center items-center right-0 translate-x-[25%] translate-y-[25%] text-sm'>12</div>
-        </div>
-  
+      </div>  
+      <button onClick={openCart} className='relative block' >
+        <GiShoppingCart size={28} color='#637381' />
+          {cartQuantity > 0 && (
+             <span className='absolute bottom-0  bg-[crimson] h-8 w-8 rounded-full text-white flex justify-center items-center right-0 translate-x-[25%] translate-y-[25%] text-sm'>{cartQuantity}</span>
+          )}
+      </button>
       {
         toggleMenu && (
           <div className='absolute z-[9999] top-32 right-8 bg-white shadow w-[18rem] p-6 flex flex-col gap-8 capitalize text-2xl font-semibold lg:hidden'>

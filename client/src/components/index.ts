@@ -16,5 +16,8 @@ export { default as BlogGallery } from './blogPost/BlogGallery'
 export { default as Hero } from './hero/Hero';
 export { default as HeroComponents } from './hero/HeroComponents';
 
+// all the product by id
+export { default as ProductItem } from './products/ProductItem';
+
 // footer
 export { default as FooterComponent } from './footerComponents/FooterComponent'
