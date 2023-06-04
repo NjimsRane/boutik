@@ -1,6 +1,13 @@
 import {Link} from 'react-router-dom'
 
-const HeroComponents = ({img1,title,subtitle, link}) => {
+type HeroComponentsProps ={
+  img1:string
+  title:string
+  subtitle:string
+  link:string
+}
+
+const HeroComponents = ({img1,title,subtitle, link}:HeroComponentsProps) => {
     return (
         <div className="bg-cover bg-center h-[20rem] md:h-[22rem] lg:h-[26.2rem] w-[full] relative"
         style={{

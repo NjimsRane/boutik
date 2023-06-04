@@ -9,10 +9,10 @@ type  ProductItemProps ={
     companyName:string,
     color:string,
     price:number,
-    imgUrl?:undefined
+    imgUrl?:string
 }
 
-const ProductItem = ({id,companyName,price,imgUrl,color}:ProductItemProps) => {
+const ProductItem = ({id,companyName,price,imgUrl}:ProductItemProps) => {
     const { getItemQuantity,increaseCartQuantity,decreaseCartQuantity,removerFromCart } = useShoppingCart()
   const quantity =getItemQuantity(id);
   return (

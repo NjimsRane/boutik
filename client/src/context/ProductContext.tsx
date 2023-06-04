@@ -32,14 +32,14 @@ export function useShoppingCart(){
 // context provider to get all the value needed and operations with the cart
 export function ShoppingCartProvider ({children}:ShoppingCartProviderProp){
 
-  const [isOpen,setIsOpen] =useState(false)
+  // const [isOpen,setIsOpen] =useState(false)
   const [cartItems,setCartItems] =useState<CartItem[]>([])
 
 
   const cartQuantity = cartItems.reduce((quantity,item)=>item.quantity + quantity,0)
 
-  const openCart =()=>setIsOpen(true)
-  const closeCart =()=>setIsOpen(false)
+  // const openCart =()=>setIsOpen(true)
+  // const closeCart =()=>setIsOpen(false)
 
   function getItemQuantity (id:number){
     return (
@@ -97,8 +97,8 @@ export function ShoppingCartProvider ({children}:ShoppingCartProviderProp){
         increaseCartQuantity,
         decreaseCartQuantity,
         removerFromCart,
-        openCart,
-        closeCart,
+        // openCart,
+        // closeCart,
         cartItems,
         cartQuantity
       }}>
