@@ -3,7 +3,7 @@ import {
     RouterProvider, 
     Outlet
 } from 'react-router-dom'
-import { Accessories, Contact, Home, Products, Shop ,Blog, Error } from './pages'
+import { Accessories, Contact, Home, Products, Shop ,Blog, ErrorPage } from './pages'
 import { Footer, Header, Services } from './layouts'
 
 
@@ -57,7 +57,7 @@ const App = () => {
       },
       {
         path:'*',
-        element:<Error />
+        element:<ErrorPage />
       }
       
     ]

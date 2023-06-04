@@ -1,7 +1,13 @@
 import {  BsTruck , BsWallet2} from 'react-icons/bs'
 import {  TfiReload } from 'react-icons/tfi'
+import {ReactNode} from 'react'
+type ServiceProps ={
+    illustration:ReactNode
+    title:string
+    desc:string
+}
 
-const Service = ({illustration,title,desc})=>{
+const Service = ({illustration,title,desc}:ServiceProps)=>{
     return (
         <div className='px-16 md:px-20 lg:px-36 flex flex-col justify-center items-center gap-6 lg:border lg:border-b-0 py-16'>
             <div className='w-20 h-20 rounded-full grid place-items-center shadow'>

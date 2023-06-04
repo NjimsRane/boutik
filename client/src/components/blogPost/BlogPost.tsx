@@ -1,11 +1,20 @@
-const BlogPost = ({blogImg,blogTitle,blogDesc,blogDate}) => {
+type BlogPostProps = {
+    blogImg:string
+    blogTitle:string
+    blogDesc:string
+    blogDate:string
+}
+
+const BlogPost = ({blogImg,blogTitle,blogDesc,blogDate}:BlogPostProps) => {
     return (
-        <div className="bg-[#fff] shadow-sm">
+        <div className="bg-[#fff] shadow-sm h-[40rem] lg:h-[42rem] overflow-scroll blogPost">
             <img src={blogImg} alt="blog picture" className="md:h-[20rem]  lg:h-[25rem]  w-full object-cover" />
             <div className="px-2 pb-4">
                 <h3 className="my-4 text-4xl text-[#090E34] font-bold lg:w-[30ch]">{blogTitle}</h3>
-                <p className=" lg:w-[60ch] leading-normal text-lg text-[#090E34]">{blogDesc}</p>
-                <span className="block text-right text-[#637381]">{blogDate}</span>
+                <div className="flex justify-between">
+                    <p className=" lg:w-[60ch] leading-normal text-lg text-[#090E34]">{blogDesc}</p>
+                    <span className="text-right text-[#637381] self-end">{blogDate}</span>
+                </div>
             </div>
         </div>
     );

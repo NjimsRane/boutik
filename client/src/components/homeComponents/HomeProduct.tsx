@@ -1,6 +1,4 @@
-// import { bag } from '../../assets'
-// import {BsStarFill ,BsStar} from 'react-icons/bs'
-// import {Link} from 'react-router-dom'
+
 import storeItems from '../../data/items.json'
 import { ProductItem } from '../../components'
 
@@ -10,7 +8,7 @@ const HomeProduct = () => {
        
         {storeItems.map(item=>(
             <div key={item.lists[0].id}>
-                <ProductItem {...item.lists[0]}/>
+                <ProductItem {...item.lists[2]}/>
             </div>
         ))}
        

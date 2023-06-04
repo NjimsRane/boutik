@@ -1,6 +1,8 @@
-import React from 'react'
+type BlogTitleProps ={
+  title:string
+}
 
-const BlogTitle = ({title}) => {
+const BlogTitle = ({title}:BlogTitleProps) => {
   return (
     <div className='relative my-8'>
         <h2 className="text-4xl text-[#090E34] font-bold capitalize  mb-8">{title}</h2>

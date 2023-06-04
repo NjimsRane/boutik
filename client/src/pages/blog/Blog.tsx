@@ -36,7 +36,7 @@ const Blog = () => {
         <div>
           <BlogPost
             blogImg={blog2}
-            blogTitle='The best way to change your summer wardrobe into autumn wardrobe'
+            blogTitle='The best way to change your summer.'
             blogDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quos in minus quae voluptatem, consequatur fugit repellat similique provident accusamus?'
             blogDate='Jan 12 , 2023'
           />
@@ -44,7 +44,7 @@ const Blog = () => {
         <div className="reveal left">
           <BlogPost
             blogImg={blog3}
-            blogTitle='The best way to change your summer wardrobe into autumn wardrobe'
+            blogTitle='GIYer and TV host Oprah`s jouney through gaming keeps evolving'
             blogDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quos in minus quae voluptatem, consequatur fugit repellat similique provident accusamus?'
             blogDate='Feb 12 , 2023'
           />
@@ -69,7 +69,7 @@ const Blog = () => {
         <div className="reveal right">
           <BlogPost
             blogImg={blog6}
-            blogTitle='The best way to change your summer wardrobe into autumn wardrobe'
+            blogTitle='Men`s fashion in leather.'
             blogDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quos in minus quae voluptatem, consequatur fugit repellat similique provident accusamus?'
             blogDate='May 12 , 2023'
           />

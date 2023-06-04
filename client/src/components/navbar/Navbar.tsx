@@ -66,7 +66,7 @@ const Navbar = () => {
 
   const {openCart,cartQuantity} = useShoppingCart();
   return (
-    <nav className="flex justify-between items-center relative gap-4 px-16 py-8 md:px-20 lg:px-36 shadow bg-white">
+    <nav className="relative flex justify-between items-center  gap-4 px-16 py-8 md:px-20 lg:px-36 shadow bg-white">
       <div className="flex justify-between items-center w-full" >
           <Link to='/'>
               <img src={logo1} alt="logo"  className='w-44'/>

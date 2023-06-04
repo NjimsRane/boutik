@@ -2,21 +2,22 @@ import formatCurrency from "../../utilities/formatCurrency"
 import { BsStarFill,BsStar } from "react-icons/bs";
 import {FaPlus , FaMinus} from 'react-icons/fa'
 import { useShoppingCart } from "../../context/ProductContext";
+
+
 type  ProductItemProps ={
     id:number,
     companyName:string,
     color:string,
     price:number,
-    type:string,
-    imgUrl:string
+    imgUrl?:undefined
 }
 
-const ProductItem = ({id,companyName,type,price,imgUrl}:ProductItemProps) => {
+const ProductItem = ({id,companyName,price,imgUrl,color}:ProductItemProps) => {
     const { getItemQuantity,increaseCartQuantity,decreaseCartQuantity,removerFromCart } = useShoppingCart()
   const quantity =getItemQuantity(id);
   return (
     <div className="h-[40rem] rounded-md overflow-hidden group">
-        <img src={imgUrl} alt={ companyName} className="w-full h-[65%] object-cover transition-all duration-500 group-hover:scale-125" />
+        <img src={imgUrl} alt={ companyName} className="w-full h-[65%] object-cover transition-all duration-500 group-hover:scale-125 group-hover:opacity-80" />
         <div className="h-fit bg-white py-4 shadow-sm">
             <div className="p-4 h-auto">
                 <h3 className="capitalize text-3xl font-semibold text-[#090E34] mb-4">{ companyName}</h3>
@@ -47,9 +48,6 @@ const ProductItem = ({id,companyName,type,price,imgUrl}:ProductItemProps) => {
                     )
                  }
             </div>
-            
-            
-            
         </div>
     </div>
   )
