@@ -1,3 +1,5 @@
+import RandomStars from './randomStars/RandomStars';
+
 export { default as Navbar } from './navbar/Navbar';
 
 // home
@@ -5,7 +7,8 @@ export { default as HomeProducts } from './homeComponents/HomeProducts'
 export { default as HomeProduct } from './homeComponents/HomeProduct'
 export { default as Brands } from './brands/Brands'
 
-
+// stars
+export { default as RandomStars } from './randomStars/RandomStars'
 
 // blog
 export { default as BlogTitle } from './blogPost/BlogTitle' 

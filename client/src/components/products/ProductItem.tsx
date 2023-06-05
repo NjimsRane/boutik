@@ -1,7 +1,8 @@
 import formatCurrency from "../../utilities/formatCurrency"
-import { BsStarFill,BsStar } from "react-icons/bs";
+
 import {FaPlus , FaMinus} from 'react-icons/fa'
 import { useShoppingCart } from "../../context/ProductContext";
+import { RandomStars } from "../../components";
 
 
 type  ProductItemProps ={
@@ -21,13 +22,7 @@ const ProductItem = ({id,companyName,price,imgUrl}:ProductItemProps) => {
         <div className="h-fit bg-white py-4 shadow-sm">
             <div className="p-4 h-auto">
                 <h3 className="capitalize text-3xl font-semibold text-[#090E34] mb-4">{ companyName}</h3>
-                <p className='flex items-center gap-4 text-2xl'>
-                    <BsStarFill className='text-[goldenrod]' />
-                    <BsStarFill className='text-[goldenrod]' />
-                    <BsStarFill className='text-[goldenrod]' />
-                    <BsStarFill className='text-[goldenrod]' />
-                    <BsStar className='text-[goldenrod]'/>
-                </p>
+                <RandomStars />
             </div>
             <div className="flex items-center justify-between px-4">
                 <p className="text-xl text-[#637381]">{formatCurrency(price)}</p>
