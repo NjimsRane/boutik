@@ -1,4 +1,9 @@
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import {
+	createBrowserRouter,
+	RouterProvider,
+	Outlet,
+	Navigate,
+} from "react-router-dom";
 import {
 	Accessories,
 	Contact,
@@ -7,10 +12,15 @@ import {
 	Shop,
 	Blog,
 	ErrorPage,
+	Login,
+	Signup,
 } from "./pages";
 import { Footer, Header, Services } from "./layouts";
 
 const App = () => {
+	// fake login
+	// const fakeLogin = false;
+
 	const Layout = () => {
 		return (
 			<>
@@ -21,6 +31,7 @@ const App = () => {
 			</>
 		);
 	};
+
 	const router = createBrowserRouter([
 		{
 			path: "/",
@@ -55,6 +66,14 @@ const App = () => {
 		{
 			path: "*",
 			element: <ErrorPage />,
+		},
+		{
+			path: "/login",
+			element: <Login />,
+		},
+		{
+			path: "/signup",
+			element: <Signup />,
 		},
 	]);
 

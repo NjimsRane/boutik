@@ -2,200 +2,198 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-   .active{
-        color:#3056D3;
-    }
-    .link {
-        color:#090E34;
-        transition: all 0.5s ease;
-    }   
-    .link:hover,
-    .footerLink a:hover{
-        color:#3056D3;
-    }
+@layer components {
+	.active {
+		color: #3056d3;
+	}
+	.link {
+		color: #090e34;
+		transition: all 0.5s ease;
+	}
+	.link:hover,
+	.footerLink a:hover {
+		color: #3056d3;
+	}
 
-    .btn{
-        background-color:#3056D3;
-        width:14rem;
-        color:#fff;
-        font-weight:bold;
-        text-transform: capitalize;
-        padding-block:0.7rem;
-        border-radius:3px;
-        font-size:1.6rem;
-        transition:all 0.5s ease;
-    }
+	.btn {
+		background-color: #3056d3;
+		width: 14rem;
+		color: #fff;
+		font-weight: bold;
+		text-transform: capitalize;
+		padding-block: 0.7rem;
+		border-radius: 3px;
+		font-size: 1.6rem;
+		transition: all 0.5s ease;
+	}
 
-    .btn:hover{
-        background-color:#212B36;
-    }
+	.btn:hover {
+		background-color: #212b36;
+	}
 
-    .brands{
-         animation:slides 20s linear infinite ;
-    }
+	.brands {
+		animation: slides 20s linear infinite;
+	}
 
-    .hero{
-        grid-template-areas: 
-            'hero1'
-            'hero2'
-        ;
-    }   
+	.hero {
+		grid-template-areas:
+			"hero1"
+			"hero2";
+	}
 
-    @media screen and (min-width:900px) {
-        .hero{
-            grid-template-areas:
-                'hero1 hero1 hero2'
-            ;
-        }
-    } 
-    .hero1{
-        grid-area:hero1;
-    }
-    .hero2{
-        grid-area:hero2;
-    }
+	@media screen and (min-width: 900px) {
+		.hero {
+			grid-template-areas: "hero1 hero1 hero2";
+		}
+	}
+	.hero1 {
+		grid-area: hero1;
+	}
+	.hero2 {
+		grid-area: hero2;
+	}
 
-    /* home product */
-    .homeProduct{
-        margin-block:2rem;
-        display:grid;
-        grid-template-columns:repeat(auto-fit,minmax(min(100%,26rem),1fr));
-        gap:2rem;
-    }
+	/* home product */
+	.homeProduct {
+		margin-block: 2rem;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+		gap: 2rem;
+	}
 
-   
-    .gallery{
-        display:grid;
-        grid-template-columns:1fr;
-        gap:2rem;
-        grid-template-areas:
-            'gal1'
-            'gal2'
-            'gal3'
-            'gal4'
-            'gal5'
-            'gal6'
-            'gal7'
-        ;
-    }
-    .footerLink{
-        display:grid;
-        grid-template-columns:1fr;
-        gap:1rem;
-    }
-    .footerLink a{
-        text-transform: capitalize;
-        color:#637381;
-        font-weight: 600;
-        font-size:1.5rem;
-        transition: all 0.5s ease;
-    }
+	.inputBox input:valid ~ span,
+	.inputBox input:focus ~ span {
+		color: #3056d3;
+		transform: translate(-0.5rem, -2.2rem);
+		font-size: 0.8rem;
+	}
 
-    /* BlogPost */
-    .blogPost::-webkit-scrollbar{
-        display:none;
-    }
+	.gallery {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		grid-template-areas:
+			"gal1"
+			"gal2"
+			"gal3"
+			"gal4"
+			"gal5"
+			"gal6"
+			"gal7";
+	}
+	.footerLink {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+	.footerLink a {
+		text-transform: capitalize;
+		color: #637381;
+		font-weight: 600;
+		font-size: 1.5rem;
+		transition: all 0.5s ease;
+	}
 
-    /* shop page */
-    .smallImg{
-        flex-basis:24%;
-        cursor: pointer;
-    }
+	input:invalid ~ small {
+		display: block;
+	}
 
-    /* gallery */
-    @media screen and (min-width:700px) {
-        .gallery{
-            grid-template-columns:repeat(2,1fr);
-            grid-template-areas: 
-                'gal1 gal1'
-                'gal7 gal6'
-                'gal2 gal2'
-                'gal3 gal5'
-                'gal4 gal4'
-            ;
-        }
-    }
-    @media screen and (min-width:900px) {
-        .gallery{
-            grid-template-columns:repeat(3,1fr);
-            grid-template-areas: 
-                'gal1 gal2 gal2'
-                'gal3 gal3 gal4'
-                'gal7 gal5 gal6'
-            ;
-        }
-    }
+	/* BlogPost */
+	.blogPost::-webkit-scrollbar {
+		display: none;
+	}
 
+	/* shop page */
+	.smallImg {
+		flex-basis: 24%;
+		cursor: pointer;
+	}
+
+	/* gallery */
+	@media screen and (min-width: 700px) {
+		.gallery {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas:
+				"gal1 gal1"
+				"gal7 gal6"
+				"gal2 gal2"
+				"gal3 gal5"
+				"gal4 gal4";
+		}
+	}
+	@media screen and (min-width: 900px) {
+		.gallery {
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-areas:
+				"gal1 gal2 gal2"
+				"gal3 gal3 gal4"
+				"gal7 gal5 gal6";
+		}
+	}
 }
-
-
 
 /* animation brands */
 @keyframes slides {
-    0%{
-        left: 0;
-    }
-    100%{
-        left:-100%;
-    }
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -100%;
+	}
 }
-
 
 /*  reveal  */
-.left{
-    transform:translateX(-150px);
-    opacity:0;
-    transition:all 1s ease;
+.left {
+	transform: translateX(-150px);
+	opacity: 0;
+	transition: all 1s ease;
 }
 
-.left.active{
-    transform:translateX(0);
-    opacity:1;
+.left.active {
+	transform: translateX(0);
+	opacity: 1;
 }
-.right{
-    transform:translateX(150px);
-    opacity:0;
-    transition:all 1s ease;
+.right {
+	transform: translateX(150px);
+	opacity: 0;
+	transition: all 1s ease;
 }
 
-.right.active{
-    transform:translateX(0);
-    opacity:1;
+.right.active {
+	transform: translateX(0);
+	opacity: 1;
 }
 
 /* gallery */
 
 /* grid area */
-.gal1{
-    grid-area: gal1;
+.gal1 {
+	grid-area: gal1;
 }
-.gal2{
-    grid-area: gal2;
+.gal2 {
+	grid-area: gal2;
 }
-.gal3{
-    grid-area: gal3;
+.gal3 {
+	grid-area: gal3;
 }
-.gal4{
-    grid-area: gal4;
-    
+.gal4 {
+	grid-area: gal4;
 }
-.gal5{
-    grid-area: gal5;
+.gal5 {
+	grid-area: gal5;
 }
-.gal6{
-    grid-area: gal6;
+.gal6 {
+	grid-area: gal6;
 }
-.gal7{
-    grid-area: gal7;
+.gal7 {
+	grid-area: gal7;
 }
-.toTop{
-    transform:translateY(150px);
-    opacity:0;
-    transition:all 1s ease;
+.toTop {
+	transform: translateY(150px);
+	opacity: 0;
+	transition: all 1s ease;
 }
-.toTop.active{
-    transform:translateY(0);
-    opacity:1;
+.toTop.active {
+	transform: translateY(0);
+	opacity: 1;
 }
-

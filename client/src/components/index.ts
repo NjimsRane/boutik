@@ -20,5 +20,9 @@ export { default as HeroComponents } from "./hero/HeroComponents";
 // all the product by id
 export { default as ProductItem } from "./products/ProductItem";
 
+// form
+export { default as InputForm } from "./inputForm/InputForm";
+export { default as FormDetails } from "./inputForm/FormDetails";
+
 // footer
 export { default as FooterComponent } from "./footerComponents/FooterComponent";
