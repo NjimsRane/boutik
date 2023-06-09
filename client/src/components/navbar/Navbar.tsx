@@ -11,43 +11,69 @@ const Menu = () => {
 		<>
 			<NavLink
 				to="/"
-				className={({ isActive }) => (isActive ? "active" : "link")}
+				className={({ isActive }) =>
+					isActive
+						? "text-[#3056d3]"
+						: "text-[#090e34] duration-500 transition-all hover:text-[#3056d3]"
+				}
 			>
 				home
 			</NavLink>
 			<NavLink
 				to="/shop"
-				className={({ isActive }) => (isActive ? "active" : "link")}
+				className={({ isActive }) =>
+					isActive
+						? "text-[#3056d3]"
+						: "text-[#090e34] duration-500 transition-all hover:text-[#3056d3]"
+				}
 			>
 				shop
 			</NavLink>
 			<NavLink
 				to="/products"
-				className={({ isActive }) => (isActive ? "active" : "link")}
+				className={({ isActive }) =>
+					isActive
+						? "text-[#3056d3]"
+						: "text-[#090e34] duration-500 transition-all hover:text-[#3056d3]"
+				}
 			>
 				products
 			</NavLink>
 			<NavLink
 				to="/blog"
-				className={({ isActive }) => (isActive ? "active" : "link")}
+				className={({ isActive }) =>
+					isActive
+						? "text-[#3056d3]"
+						: "text-[#090e34] duration-500 transition-all hover:text-[#3056d3]"
+				}
 			>
 				blog
 			</NavLink>
 			<NavLink
 				to="/accessories"
-				className={({ isActive }) => (isActive ? "active" : "link")}
+				className={({ isActive }) =>
+					isActive
+						? "text-[#3056d3]"
+						: "text-[#090e34] duration-500 transition-all hover:text-[#3056d3]"
+				}
 			>
 				accessories
 			</NavLink>
 			<NavLink
 				to="/contact"
-				className={({ isActive }) => (isActive ? "active" : "link")}
+				className={({ isActive }) =>
+					isActive
+						? "text-[#3056d3]"
+						: "text-[#090e34] duration-500 transition-all hover:text-[#3056d3]"
+				}
 			>
 				contact
 			</NavLink>
 		</>
 	);
 };
+
+const user = !false;
 
 const Navbar = () => {
 	const [toggleMenu, setToggleMenu] = useState(false);
@@ -69,6 +95,21 @@ const Navbar = () => {
 				</Link>
 				<div className="hidden lg:flex items-center gap-8 capitalize text-2xl font-semibold">
 					<Menu />
+					{user ? (
+						<Link
+							to="/login"
+							className="w-[7rem] bg-[#3056d3] py-1 text-2xl capitalize font-bold text-white tracking-wider rounded text-center"
+						>
+							<button className="capitalize">login</button>
+						</Link>
+					) : (
+						<Link
+							to="/"
+							className="w-[7rem] bg-[crimson] py-1 text-2xl capitalize font-bold text-white tracking-wider rounded text-center"
+						>
+							<button className="capitalize">logout</button>
+						</Link>
+					)}
 				</div>
 				<div className="border-[1.5px] border-white hover:border-[1.5px] hover:border-[#3056D3] p-1 rounded transition-all duration-500 lg:hidden">
 					{toggleMenu ? (
@@ -100,8 +141,23 @@ const Navbar = () => {
 				)}
 			</button>
 			{toggleMenu && (
-				<div className="absolute z-[9999] top-32 right-8 bg-white shadow w-[18rem] p-6 flex flex-col gap-8 capitalize text-2xl font-semibold lg:hidden">
+				<div className="scale-up-center absolute z-[9999] top-32 right-8 bg-white shadow w-[20rem] p-6 flex flex-col gap-8 capitalize text-2xl font-semibold lg:hidden">
 					<Menu />
+					{user ? (
+						<Link
+							to="/login"
+							className="w-[7rem] bg-[#3056d3] py-1 text-2xl capitalize font-bold text-white tracking-wider rounded text-center"
+						>
+							<button className="capitalize">login</button>
+						</Link>
+					) : (
+						<Link
+							to="/"
+							className="w-[7rem] bg-[crimson] py-1 text-2xl capitalize font-bold text-white tracking-wider rounded text-center"
+						>
+							<button className="capitalize">logout</button>
+						</Link>
+					)}
 				</div>
 			)}
 		</nav>

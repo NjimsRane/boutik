@@ -3,12 +3,15 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import { ShoppingCartProvider } from "./context/ProductContext.tsx";
+import { UserProvider } from "./context/UserContext.tsx";
 // the app has access to all the thing inside the shoppingCartProvider
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-	<React.StrictMode>
-		<ShoppingCartProvider>
-			<App />
-		</ShoppingCartProvider>
-	</React.StrictMode>
+	<UserProvider>
+		<React.StrictMode>
+			<ShoppingCartProvider>
+				<App />
+			</ShoppingCartProvider>
+		</React.StrictMode>
+	</UserProvider>
 );

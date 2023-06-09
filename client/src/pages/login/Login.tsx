@@ -47,7 +47,7 @@ const Login = () => {
 				backgroundImage: `linear-gradient(145deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(${gal2})`,
 			}}
 		>
-			<div className="w-[32rem] h-[38rem] bg-white rounded px-12 py-14 flex flex-col gap-16">
+			<div className="w-[32rem] h-[38rem] bg-white rounded px-12 py-12 flex flex-col gap-16">
 				<FormDetails
 					title="sign in"
 					desc="welcome back"
@@ -55,6 +55,7 @@ const Login = () => {
 				<form
 					action="#"
 					onSubmit={handleSubmit}
+					className="h-[30rem] relative"
 				>
 					{inputs.map(input => (
 						<div className="my-8">
@@ -74,18 +75,22 @@ const Login = () => {
 						>
 							forgot password?
 						</a>
+
+						<input
+							type="submit"
+							value="login"
+							className="w-[8rem] bg-[#3056d3] py-2 text-2xl capitalize font-bold text-white tracking-wider rounded cursor-pointer"
+						/>
+					</div>
+					<div className="text-center absolute bottom-0 left-[50%] -translate-x-[50%]">
+						<span>Don`t have an account ?</span>
 						<Link
 							to="/signup"
-							className="font-bold text-[#3056d3]"
+							className="font-bold text-[#3056d3] ml-2"
 						>
-							sign up
+							Sign up
 						</Link>
 					</div>
-					<input
-						type="submit"
-						value="login"
-						className="w-[8rem] bg-[#3056d3] py-2 text-2xl capitalize font-bold text-white tracking-wider rounded cursor-pointer"
-					/>
 				</form>
 			</div>
 		</div>

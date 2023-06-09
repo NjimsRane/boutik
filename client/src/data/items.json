@@ -3,6 +3,13 @@
 		"category": "shoes",
 		"lists": [
 			{
+				"id": 10,
+				"companyName": "nike",
+				"color": "white",
+				"price": 28,
+				"imgUrl": "/images/shoes/s0.jpg"
+			},
+			{
 				"id": 1,
 				"companyName": "addidas",
 				"color": "black",
@@ -50,6 +57,13 @@
 	{
 		"category": "watches",
 		"lists": [
+			{
+				"id": 70,
+				"companyName": "rolex",
+				"color": "brown",
+				"price": 200,
+				"imgUrl": "/images/watches/w0.jpg"
+			},
 			{
 				"id": 7,
 				"companyName": "rolex",
@@ -286,6 +300,13 @@
 		"category": "T-shirt",
 		"lists": [
 			{
+				"id": 380,
+				"companyName": "zara",
+				"color": "black",
+				"price": 21,
+				"imgUrl": "/images/t-shirts/t0.jpg"
+			},
+			{
 				"id": 38,
 				"companyName": "D&G",
 				"color": "blue",
@@ -333,6 +354,13 @@
 		"category": "accessories",
 		"lists": [
 			{
+				"id": 450,
+				"companyName": "L&G",
+				"color": "black",
+				"price": 50,
+				"imgUrl": "/images/accessories/a0.jpg"
+			},
+			{
 				"id": 45,
 				"companyName": "samsung",
 				"color": "pink",
@@ -379,6 +407,13 @@
 	{
 		"category": "bags",
 		"lists": [
+			{
+				"id": 510,
+				"companyName": "addidas",
+				"color": "black",
+				"price": 100,
+				"imgUrl": "/images/bags/b0.jpg"
+			},
 			{
 				"id": 51,
 				"companyName": "channel",

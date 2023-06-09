@@ -3,14 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-	.active {
-		color: #3056d3;
-	}
-	.link {
-		color: #090e34;
-		transition: all 0.5s ease;
-	}
-	.link:hover,
 	.footerLink a:hover {
 		color: #3056d3;
 	}
@@ -109,6 +101,13 @@
 		cursor: pointer;
 	}
 
+	/* nav moblie */
+	.scale-up-center {
+		-webkit-animation: scale-up-center 0.4s
+			cubic-bezier(0.39, 0.575, 0.565, 1) both;
+		animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+	}
+
 	/* gallery */
 	@media screen and (min-width: 700px) {
 		.gallery {
@@ -196,4 +195,27 @@
 .toTop.active {
 	transform: translateY(0);
 	opacity: 1;
+}
+
+/* nav mobile */
+
+@-webkit-keyframes scale-up-center {
+	0% {
+		-webkit-transform: scale(0.5);
+		transform: scale(0.5);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+@keyframes scale-up-center {
+	0% {
+		-webkit-transform: scale(0.5);
+		transform: scale(0.5);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
 }

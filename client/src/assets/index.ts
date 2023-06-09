@@ -1,3 +1,4 @@
+// logo and hero
 export { default as logo1 } from "./images/logo/logo.svg";
 export { default as logo2 } from "./images/logo/logo-white.svg";
 export { default as hero1 } from "./images/hero/hero1.jpg";
@@ -33,12 +34,6 @@ export { default as gal4 } from "./images/gallery/g4.jpg";
 export { default as gal5 } from "./images/gallery/g5.jpg";
 export { default as gal6 } from "./images/gallery/g6.jpg";
 export { default as gal7 } from "./images/gallery/g7.jpg";
-
-// homeProduct
-export { default as bag } from "./images/homeProduct/bag.jpg";
-export { default as Tshirt } from "./images/homeProduct/t-shirt.jpg";
-export { default as wallet } from "./images/homeProduct/wallet.jpg";
-export { default as watch } from "./images/homeProduct/watch.jpg";
 
 // pay
 export { default as playStore } from "./images/pay/play.jpg";
