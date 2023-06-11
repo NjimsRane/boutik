@@ -3,6 +3,7 @@ import formatCurrency from "../../utilities/formatCurrency";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { useShoppingCart } from "../../context/ProductContext";
 import { RandomStars } from "../../components";
+import { Link } from "react-router-dom";
 
 type ProductItemProps = {
 	id: number;
@@ -29,20 +30,20 @@ const ProductItem = ({ id, companyName, price, imgUrl }: ProductItemProps) => {
 			/>
 			<div className="h-fit bg-white py-4 shadow-sm">
 				<div className="p-4 h-auto">
-					<h3 className="capitalize text-3xl font-semibold text-[#090E34] mb-4">
+					<h3 className="capitalize text-3xl font-semibold text-secondary mb-4">
 						{companyName}
 					</h3>
 					<RandomStars />
 				</div>
 				<div className="flex items-center justify-between px-4">
-					<p className="text-xl text-[#637381]">
+					<p className="text-xl text-tertiary">
 						{formatCurrency(price)}
 					</p>
 					<div className="flex items-center gap-2">
 						<button onClick={() => increaseCartQuantity(id)}>
 							<FaPlus />
 						</button>
-						<span className="text-[#090E34]">{quantity}</span>
+						<span className="text-secondary">{quantity}</span>
 						<button onClick={() => decreaseCartQuantity(id)}>
 							<FaMinus />
 						</button>
@@ -50,11 +51,8 @@ const ProductItem = ({ id, companyName, price, imgUrl }: ProductItemProps) => {
 				</div>
 				<div className="flex items-center justify-between">
 					<p className="px-4">
-						<button
-							onClick={() => increaseCartQuantity(id)}
-							className="bg-[#3056D3] p-2 rounded-md text-lg w-[10rem]  text-white uppercase mt-4 transition-all duration-500 translate-y-[1.625rem] opacity-0 hover:bg-[#212B36] group-hover:opacity-100 group-hover:translate-y-0"
-						>
-							add to cart
+						<button className="bg-primary p-2 rounded-md text-lg w-[10rem]  text-white uppercase mt-4 transition-all duration-500 translate-y-[1.625rem] opacity-0 hover:bg-[#212B36] group-hover:opacity-100 group-hover:translate-y-0">
+							<Link to="/shop/id">see details</Link>
 						</button>
 					</p>
 					{quantity > 0 && (

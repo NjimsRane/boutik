@@ -2,13 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--primary: #3056d3;
+	--secondary: #090e34;
+	--tertiary: #637381;
+}
+
 @layer components {
 	.footerLink a:hover {
-		color: #3056d3;
+		color: var(--primary);
 	}
 
 	.btn {
-		background-color: #3056d3;
+		background-color: var(--primary);
 		width: 14rem;
 		color: #fff;
 		font-weight: bold;
@@ -55,7 +61,7 @@
 
 	.inputBox input:valid ~ span,
 	.inputBox input:focus ~ span {
-		color: #3056d3;
+		color: var(--primary);
 		transform: translate(-0.5rem, -2.2rem);
 		font-size: 0.8rem;
 	}
@@ -80,7 +86,7 @@
 	}
 	.footerLink a {
 		text-transform: capitalize;
-		color: #637381;
+		color: var(--tertiary);
 		font-weight: 600;
 		font-size: 1.5rem;
 		transition: all 0.5s ease;

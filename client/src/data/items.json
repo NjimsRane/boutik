@@ -36,14 +36,14 @@
 				"companyName": "nike",
 				"color": "white",
 				"price": 24,
-				"imgUrl": "/images/shoes/s9.jpg"
+				"imgUrl": "/images/shoes/s6.jpg"
 			},
 			{
 				"id": 5,
-				"companyName": "nike",
+				"companyName": "addidas",
 				"color": "white",
 				"price": 25,
-				"imgUrl": "/images/shoes/s10.jpg"
+				"imgUrl": "/images/shoes/s19.jpg"
 			},
 			{
 				"id": 6,

@@ -20,18 +20,18 @@ const HeroComponents = ({
 				backgroundImage: `url(${img1})`,
 			}}
 		>
-			<div className="absolute top-[50%] right-6 text-[#090E34] ">
+			<div className="absolute top-[50%] right-6 text-secondary ">
 				<h2 className="text-3xl capitalize font-bold mb-2 leading-normal ">
 					<Link
 						to="/"
-						className=" duration-500 transition-all hover:text-[#3056D3]"
+						className=" duration-500 transition-all hover:text-primary"
 					>
 						{title}
 						<span className="block text-right">{subtitle}</span>
 					</Link>
 				</h2>
 				<Link
-					className="capitalize text-2xl font-semibold text-right block duration-500 transition-all hover:text-[#3056D3]"
+					className="capitalize text-2xl font-semibold text-right block duration-500 transition-all hover:text-primary"
 					to="/shop"
 				>
 					{link}

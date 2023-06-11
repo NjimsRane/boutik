@@ -13,8 +13,8 @@ const Menu = () => {
 				to="/"
 				className={({ isActive }) =>
 					isActive
-						? "text-[#3056d3]"
-						: "text-[#090e34] duration-500 transition-all hover:text-[#3056d3]"
+						? "text-primary"
+						: "text-secondary duration-500 transition-all hover:text-primary"
 				}
 			>
 				home
@@ -23,8 +23,8 @@ const Menu = () => {
 				to="/shop"
 				className={({ isActive }) =>
 					isActive
-						? "text-[#3056d3]"
-						: "text-[#090e34] duration-500 transition-all hover:text-[#3056d3]"
+						? "text-primary"
+						: "text-secondary duration-500 transition-all hover:text-primary"
 				}
 			>
 				shop
@@ -33,8 +33,8 @@ const Menu = () => {
 				to="/products"
 				className={({ isActive }) =>
 					isActive
-						? "text-[#3056d3]"
-						: "text-[#090e34] duration-500 transition-all hover:text-[#3056d3]"
+						? "text-primary"
+						: "text-secondary duration-500 transition-all hover:text-primary"
 				}
 			>
 				products
@@ -43,8 +43,8 @@ const Menu = () => {
 				to="/blog"
 				className={({ isActive }) =>
 					isActive
-						? "text-[#3056d3]"
-						: "text-[#090e34] duration-500 transition-all hover:text-[#3056d3]"
+						? "text-primary"
+						: "text-secondary duration-500 transition-all hover:text-primary"
 				}
 			>
 				blog
@@ -53,8 +53,8 @@ const Menu = () => {
 				to="/accessories"
 				className={({ isActive }) =>
 					isActive
-						? "text-[#3056d3]"
-						: "text-[#090e34] duration-500 transition-all hover:text-[#3056d3]"
+						? "text-primary"
+						: "text-secondary duration-500 transition-all hover:text-primary"
 				}
 			>
 				accessories
@@ -63,8 +63,8 @@ const Menu = () => {
 				to="/contact"
 				className={({ isActive }) =>
 					isActive
-						? "text-[#3056d3]"
-						: "text-[#090e34] duration-500 transition-all hover:text-[#3056d3]"
+						? "text-primary"
+						: "text-secondary duration-500 transition-all hover:text-primary"
 				}
 			>
 				contact
@@ -98,7 +98,7 @@ const Navbar = () => {
 					{user ? (
 						<Link
 							to="/login"
-							className="w-[7rem] bg-[#3056d3] py-1 text-2xl capitalize font-bold text-white tracking-wider rounded text-center"
+							className="w-[7rem] bg-primary py-1 text-2xl capitalize font-bold text-white tracking-wider rounded text-center"
 						>
 							<button className="capitalize">login</button>
 						</Link>
@@ -111,7 +111,7 @@ const Navbar = () => {
 						</Link>
 					)}
 				</div>
-				<div className="border-[1.5px] border-white hover:border-[1.5px] hover:border-[#3056D3] p-1 rounded transition-all duration-500 lg:hidden">
+				<div className="border-[1.5px] border-white hover:border-[1.5px] hover:border-primary p-1 rounded transition-all duration-500 lg:hidden">
 					{toggleMenu ? (
 						<AiOutlineClose
 							size={28}
@@ -146,7 +146,7 @@ const Navbar = () => {
 					{user ? (
 						<Link
 							to="/login"
-							className="w-[7rem] bg-[#3056d3] py-1 text-2xl capitalize font-bold text-white tracking-wider rounded text-center"
+							className="w-[7rem] bg-primary py-1 text-2xl capitalize font-bold text-white tracking-wider rounded text-center"
 						>
 							<button className="capitalize">login</button>
 						</Link>

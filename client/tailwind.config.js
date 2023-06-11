@@ -10,6 +10,11 @@ export default {
         md: '43.76rem',
         lg: '56.25rem',
         xl: '75rem'
+      },
+      colors: {
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+        tertiary: 'var(--tertiary)'
       }
     },
     fontFamily: {

@@ -42,7 +42,7 @@ const App = () => {
 					element: <Home />,
 				},
 				{
-					path: "/shop",
+					path: "/shop/:id",
 					element: <Shop />,
 				},
 				{

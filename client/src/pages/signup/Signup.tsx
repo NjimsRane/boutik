@@ -28,7 +28,7 @@ const Signup = () => {
 						<span>Already have an account ?</span>
 						<Link
 							to="/login"
-							className="font-bold text-[#3056d3] capitalize ml-2"
+							className="font-bold text-primary capitalize ml-2"
 						>
 							login
 						</Link>
@@ -36,7 +36,7 @@ const Signup = () => {
 					<input
 						type="submit"
 						value="signUp"
-						className="w-[8rem] bg-[#3056d3] py-2 text-2xl capitalize font-bold text-white tracking-wider rounded cursor-pointer"
+						className="w-[8rem] bg-primary py-2 text-2xl capitalize font-bold text-white tracking-wider rounded cursor-pointer"
 					/>
 				</form>
 				<div className="flex items-center gap-2">
