@@ -18,8 +18,13 @@ const InputForm = props => {
 			>
 				{label}
 			</label>
+<<<<<<< HEAD
 			<i className="absolute bottom-0 bg-primary w-full h-[2px] transition-all duration-500 rounded peer-focus:h-[2.8rem] peer-valid:h-[2.8rem] peer-invalid:bg-[crimson] -z-[9]"></i>
 			<small className="text-[crimson] capitalize px-2 tracking-wide hidden peer-focus:in absolute -bottom-4">
+=======
+			<i className="absolute bottom-0 bg-[#3056d3] w-full h-[2px] transition-all duration-500 rounded peer-focus:h-[2.8rem] peer-valid:h-[2.8rem] peer-invalid:bg-[crimson] -z-[9]"></i>
+			<small className="text-[crimson] capitalize px-2 tracking-wide hidden  absolute -bottom-4 peer-focus:block">
+>>>>>>> connect/api
 				{errorMessage}
 			</small>
 		</div>

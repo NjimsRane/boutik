@@ -5,19 +5,18 @@ import { FormDetails, InputForm } from "../../components";
 
 const Login = () => {
 	const [values, setValues] = useState({
-		username: "",
+		email: "",
 		password: "",
 	});
 
 	const inputs = [
 		{
 			id: 1,
-			name: "username",
-			type: "text",
-			label: "Username",
-			errorMessage: "invalid username",
-			pattern: "^[A-Za-z0-9]$",
-			required: true,
+			name: "email",
+			type: "email",
+			label: "Email",
+			errorMessage: "invalid email",
+			// required: true,
 		},
 		{
 			id: 2,
@@ -27,7 +26,7 @@ const Login = () => {
 			errorMessage: "Incorrect password",
 			pattern:
 				"^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$^&*])[a-zA-Z0-9!@#$^&*]{8,20}$",
-			required: true,
+			// required: true,
 		},
 	];
 

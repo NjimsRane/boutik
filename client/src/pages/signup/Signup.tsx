@@ -1,8 +1,73 @@
 import { Link } from "react-router-dom";
 import { gal2, facebook, gmail } from "../../assets";
 import { FormDetails, InputForm } from "../../components";
+import { useState, ChangeEvent } from "react";
+import axios from "axios";
 
 const Signup = () => {
+	const [values, setValues] = useState({
+		fullname: "",
+		email: "",
+		password: "",
+		confirmPassword: "",
+	});
+
+	const [err, setErr] = useState(null);
+
+	const inputs = [
+		{
+			id: 1,
+			name: "fullname",
+			type: "text",
+			label: "fullname",
+			pattern: "^[A-Za-z0-9]$",
+			errorMessage: "njimoke",
+		},
+		{
+			id: 2,
+			name: "email",
+			type: "email",
+			label: "email",
+			errorMessage: "njimoke",
+		},
+		{
+			id: 3,
+			name: "password",
+			type: "password",
+			label: "password",
+			pattern:
+				"^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$^&*])[a-zA-Z0-9!@#$^&*]{8,20}$",
+			errorMessage: "njimoke",
+		},
+		{
+			id: 4,
+			name: "confirm password",
+			type: "password",
+			label: "confirm password",
+			pattern:
+				"^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$^&*])[a-zA-Z0-9!@#$^&*]{8,20}$",
+			errorMessage: "njimoke",
+		},
+	];
+
+	const hangleChange = (e: ChangeEvent<HTMLInputElement>) => {
+		setValues({ ...values, [e.target.name]: e.target.value });
+	};
+
+	const handleClick = async (e: ChangeEvent<HTMLInputElement>) => {
+		e.preventDefault();
+		try {
+			await axios.post(
+				"http://localhost:8080/api/auths/register",
+				inputs
+			);
+		} catch (err) {
+			setErr(err);
+		}
+	};
+
+	console.log(values);
+
 	return (
 		<div
 			className="min-h-screen w-full bg-cover bg-center bg-no-repeat flex justify-center items-center px-2"
@@ -20,10 +85,17 @@ const Signup = () => {
 					action="#"
 					className="flex flex-col gap-8"
 				>
-					<InputForm />
-					<InputForm />
-					<InputForm />
-					<InputForm />
+					{inputs.map(input => (
+						<div className="my-2">
+							<InputForm
+								key={input.id}
+								{...input}
+								value={values[input.name]}
+								onChange={hangleChange}
+							/>
+						</div>
+					))}
+
 					<div className="text-right">
 						<span>Already have an account ?</span>
 						<Link
@@ -37,6 +109,7 @@ const Signup = () => {
 						type="submit"
 						value="signUp"
 						className="w-[8rem] bg-primary py-2 text-2xl capitalize font-bold text-white tracking-wider rounded cursor-pointer"
+						onClick={handleClick}
 					/>
 				</form>
 				<div className="flex items-center gap-2">
