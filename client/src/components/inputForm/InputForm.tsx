@@ -1,19 +1,28 @@
-// type InputFormProps = {
-// 	props: any;
-// };
+import { ChangeEventHandler } from "react";
 
-const InputForm = props => {
-	const { id, label, onChange, errorMessage, ...inputProps } = props;
+type InputFormProps = {
+	label: string;
+	onChange: ChangeEventHandler;
+	errorMessage: string;
+};
+
+const InputForm = ({
+	label,
+	onChange,
+	errorMessage,
+	...inputProps
+}: InputFormProps) => {
+	// const { id, label, onChange, errorMessage, ...inputProps } = props;
 	return (
 		<div className="relative z-0 group w-full">
 			<input
 				className="block w-full py-3 px-2 text-lg bg-transparent appearance-none focus:outline-none z-10 text-white peer"
 				{...inputProps}
 				onChange={onChange}
-				id={id}
+				id={label}
 			/>
 			<label
-				htmlFor={id}
+				htmlFor={label}
 				className="absolute text-xl text-tertiary capitalize tracking-wider font-semibold duration-300 transition-all transform origin-[0] -translate-y-0 top-3 px-2 -z-10 peer-placeholder-shown:translate-y-0 peer-focus:text-primary peer-focus:-translate-y-7 peer-focus:text-base peer-focus:left-0 peer-focus:px-0 peer-valid:text-primary peer-valid:-translate-y-7 peer-valid:text-base peer-valid:left-0 peer-valid:px-0 peer-invalid:text-[crimson]"
 			>
 				{label}

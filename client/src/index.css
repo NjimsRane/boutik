@@ -4,6 +4,7 @@
 
 :root {
 	--primary: #3056d3;
+	/* --primary: rgba(48, 86, 211, 0.357); */
 	--secondary: #090e34;
 	--tertiary: #637381;
 }
@@ -99,6 +100,9 @@
 	/* BlogPost */
 	.blogPost::-webkit-scrollbar {
 		display: none;
+	}
+	.blogPost {
+		scrollbar-width: none;
 	}
 
 	/* shop page */

@@ -82,6 +82,8 @@ const Footer = () => {
 							<a
 								href="#"
 								aria-label="link to app store"
+								target="_blank"
+								rel="noopener noreferrer"
 							>
 								<img
 									src={appStore}
@@ -94,6 +96,8 @@ const Footer = () => {
 							<a
 								href="#"
 								aria-label="link to play store"
+								target="_blank"
+								rel="noopener noreferrer"
 							>
 								<img
 									src={playStore}

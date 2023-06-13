@@ -4,23 +4,19 @@ import {
 	Outlet,
 	Navigate,
 } from "react-router-dom";
-import {
-	Accessories,
-	Contact,
-	Home,
-	Products,
-	Shop,
-	Blog,
-	ErrorPage,
-	Login,
-	Signup,
-} from "./pages";
+import { Suspense, lazy } from "react";
+import { ErrorPage, Login, Signup } from "./pages";
 import { Footer, Header, Services } from "./layouts";
+import Loader from "./utilities/Loader";
+
+const Home = lazy(() => import("./pages/home/Home"));
+const Shop = lazy(() => import("./pages/shop/Shop"));
+const Contact = lazy(() => import("./pages/contact/Contact"));
+const Products = lazy(() => import("./pages/products/Products"));
+const Blog = lazy(() => import("./pages/blog/Blog"));
+const Accessories = lazy(() => import("./pages/accessories/Accessories"));
 
 const App = () => {
-	// fake login
-	// const fakeLogin = false;
-
 	const Layout = () => {
 		return (
 			<>
@@ -35,14 +31,14 @@ const App = () => {
 	const router = createBrowserRouter([
 		{
 			path: "/",
-			element: <Layout />,
+			element: <Suspense fallback={<Loader />}>{<Layout />}</Suspense>,
 			children: [
 				{
 					path: "/",
 					element: <Home />,
 				},
 				{
-					path: "/shop/:id",
+					path: "/shop/",
 					element: <Shop />,
 				},
 				{

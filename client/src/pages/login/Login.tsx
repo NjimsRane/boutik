@@ -1,22 +1,44 @@
-import { useState, ChangeEvent } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { gal2 } from "../../assets";
 import { FormDetails, InputForm } from "../../components";
 
+interface IUser {
+	email: string;
+	password: string;
+}
+interface Inputs {
+	id: number;
+	name: string;
+	type: string;
+	label: string;
+	errorMessage: string;
+	required: boolean;
+	pattern?: string;
+}
+// type UserSubmitForm = {
+// 	fullname: string;
+// 	username: string;
+// 	email: string;
+// 	password: string;
+// 	confirmPassword: string;
+// 	acceptTerms: boolean;
+// };
+
 const Login = () => {
-	const [values, setValues] = useState({
+	const [values, setValues] = useState<IUser>({
 		email: "",
 		password: "",
 	});
 
-	const inputs = [
+	const inputs: Array<Inputs> = [
 		{
 			id: 1,
 			name: "email",
 			type: "email",
 			label: "Email",
 			errorMessage: "invalid email",
-			// required: true,
+			required: true,
 		},
 		{
 			id: 2,
@@ -26,11 +48,11 @@ const Login = () => {
 			errorMessage: "Incorrect password",
 			pattern:
 				"^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$^&*])[a-zA-Z0-9!@#$^&*]{8,20}$",
-			// required: true,
+			required: true,
 		},
 	];
 
-	const handleSubmit = (e: ChangeEvent<HTMLInputElement>) => {
+	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
 	};
 
