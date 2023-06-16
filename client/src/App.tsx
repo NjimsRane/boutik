@@ -1,9 +1,4 @@
-import {
-	createBrowserRouter,
-	RouterProvider,
-	Outlet,
-	Navigate,
-} from "react-router-dom";
+import { Route, Routes, Outlet } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { ErrorPage, Login, Signup } from "./pages";
 import { Footer, Header, Services } from "./layouts";
@@ -28,55 +23,56 @@ const App = () => {
 		);
 	};
 
-	const router = createBrowserRouter([
-		{
-			path: "/",
-			element: <Suspense fallback={<Loader />}>{<Layout />}</Suspense>,
-			children: [
-				{
-					path: "/",
-					element: <Home />,
-				},
-				{
-					path: "/shop/",
-					element: <Shop />,
-				},
-				{
-					path: "/contact",
-					element: <Contact />,
-				},
-				{
-					path: "/products",
-					element: <Products />,
-				},
-				{
-					path: "/accessories",
-					element: <Accessories />,
-				},
-				{
-					path: "/blog",
-					element: <Blog />,
-				},
-			],
-		},
-		{
-			path: "*",
-			element: <ErrorPage />,
-		},
-		{
-			path: "/login",
-			element: <Login />,
-		},
-		{
-			path: "/signup",
-			element: <Signup />,
-		},
-	]);
-
 	return (
-		<div>
-			<RouterProvider router={router} />
-		</div>
+		<Routes>
+			<Route
+				path="/"
+				element={
+					<Suspense fallback={<Loader />}>{<Layout />}</Suspense>
+				}
+			>
+				<Route
+					index
+					element={<Home />}
+				/>
+				<Route
+					path="/shop"
+					element={<Shop />}
+				/>
+				<Route
+					path="/shop:id"
+					element={<Shop />}
+				/>
+				<Route
+					path="/products"
+					element={<Products />}
+				/>
+				<Route
+					path="/blog"
+					element={<Blog />}
+				/>
+				<Route
+					path="/accessories"
+					element={<Accessories />}
+				/>
+				<Route
+					path="/contact"
+					element={<Contact />}
+				/>
+			</Route>
+			<Route
+				path="/login"
+				element={<Login />}
+			/>
+			<Route
+				path="/signup"
+				element={<Signup />}
+			/>
+			<Route
+				path="*"
+				element={<ErrorPage />}
+			/>
+		</Routes>
 	);
 };
 

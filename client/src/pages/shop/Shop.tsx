@@ -5,9 +5,14 @@ import storeItems from "../../data/items.json";
 import { useEffect } from "react";
 
 import { useShoppingCart } from "../../context/ProductContext";
+import { useParams } from "react-router-dom";
 
 const Shop = () => {
 	const { increaseCartQuantity } = useShoppingCart();
+	const { id } = useParams();
+	// const soule = storeItems.map((item) =>
+	// 	item.lists.map((item) => item.companyName)
+	// );
 
 	useEffect(() => {
 		document.title = "Shop | Boutik";
@@ -96,7 +101,7 @@ const Shop = () => {
 				<div className="homeProduct my-8">
 					{storeItems.map((item) => (
 						<div key={item.lists[0].id}>
-							<ProductItem {...item.lists[2]} />
+							<ProductItem {...item.lists[0]} />
 						</div>
 					))}
 				</div>
