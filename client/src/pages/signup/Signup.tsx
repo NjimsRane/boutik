@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { gal2, facebook, gmail } from "../../assets";
 import { FormDetails, InputForm } from "../../components";
-import { useState, ChangeEvent } from "react";
+import { useState, ChangeEvent, useEffect, FormEvent } from "react";
 import axios from "axios";
 
 const Signup = () => {
@@ -11,6 +11,10 @@ const Signup = () => {
 		password: "",
 		confirmPassword: "",
 	});
+
+	useEffect(() => {
+		document.title = "SignUp | Boutik";
+	}, []);
 
 	const [err, setErr] = useState(null);
 
@@ -54,7 +58,7 @@ const Signup = () => {
 		setValues({ ...values, [e.target.name]: e.target.value });
 	};
 
-	const handleClick = async (e: ChangeEvent<HTMLInputElement>) => {
+	const handleClick = async (e: FormEvent) => {
 		e.preventDefault();
 		try {
 			await axios.post(
@@ -66,7 +70,7 @@ const Signup = () => {
 		}
 	};
 
-	console.log(values);
+	// console.log(values);
 
 	return (
 		<div
@@ -85,7 +89,7 @@ const Signup = () => {
 					action="#"
 					className="flex flex-col gap-8"
 				>
-					{inputs.map(input => (
+					{inputs.map((input) => (
 						<div className="my-2">
 							<InputForm
 								key={input.id}

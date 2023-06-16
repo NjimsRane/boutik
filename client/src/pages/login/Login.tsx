@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, ChangeEvent, FormEvent, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { gal2 } from "../../assets";
 import { FormDetails, InputForm } from "../../components";
@@ -31,7 +31,11 @@ const Login = () => {
 		password: "",
 	});
 
-	const inputs: Array<Inputs> = [
+	useEffect(() => {
+		document.title = "Login | Boutik";
+	}, []);
+
+	const inputs: Inputs[] = [
 		{
 			id: 1,
 			name: "email",
@@ -78,7 +82,7 @@ const Login = () => {
 					onSubmit={handleSubmit}
 					className="h-[30rem] relative"
 				>
-					{inputs.map(input => (
+					{inputs.map((input) => (
 						<div className="my-8">
 							<InputForm
 								key={input.id}

@@ -18,12 +18,12 @@ const Products = () => {
 		"jackets",
 		"accessories",
 	];
-	console.log(filteredProducts.map(product => product.category));
+	console.log(filteredProducts.map((product) => product.category));
 
-	const handleFilterButton = selectedCategory => {
+	const handleFilterButton = (selectedCategory) => {
 		if (selectedProducts.includes(selectedCategory)) {
 			let filters = selectedProducts.filter(
-				el => el !== selectedCategory
+				(el) => el !== selectedCategory
 			);
 			setSelectedProducts(filters);
 		} else {
@@ -31,14 +31,18 @@ const Products = () => {
 		}
 	};
 
-	const filtersItems = () => {
-		if (selectedProducts.length > 0) {
-		}
-	};
+	// const filtersItems = () => {
+	// 	if (selectedProducts.length > 0) {
+	// 	}
+	// };
 
 	useEffect(() => {
-		filtersItems();
+		// filtersItems();
 	}, [selectedProducts]);
+
+	useEffect(() => {
+		document.title = "Products | Boutik";
+	}, []);
 
 	return (
 		<div className="px-16 md:px-20 lg:px-36">
@@ -55,8 +59,8 @@ const Products = () => {
 				))}
 			</div>
 			<div className="homeProduct">
-				{storeItems.map(item =>
-					item.lists.map(item => (
+				{storeItems.map((item) =>
+					item.lists.map((item) => (
 						<div key={item.id}>
 							<ProductItem {...item} />
 						</div>

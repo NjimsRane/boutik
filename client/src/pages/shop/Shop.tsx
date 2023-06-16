@@ -2,11 +2,16 @@ import { blog1, blog2, blog3, blog4, blog5 } from "../../assets";
 import { BlogTitle, ProductItem } from "../../components";
 import formatCurrency from "../../utilities/formatCurrency";
 import storeItems from "../../data/items.json";
+import { useEffect } from "react";
 
 import { useShoppingCart } from "../../context/ProductContext";
 
 const Shop = () => {
 	const { increaseCartQuantity } = useShoppingCart();
+
+	useEffect(() => {
+		document.title = "Shop | Boutik";
+	}, []);
 
 	return (
 		<div className="">
@@ -89,7 +94,7 @@ const Shop = () => {
 				</div>
 
 				<div className="homeProduct my-8">
-					{storeItems.map(item => (
+					{storeItems.map((item) => (
 						<div key={item.lists[0].id}>
 							<ProductItem {...item.lists[2]} />
 						</div>

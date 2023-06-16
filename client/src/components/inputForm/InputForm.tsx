@@ -1,10 +1,4 @@
-import { ChangeEventHandler } from "react";
-
-type InputFormProps = {
-	label: string;
-	onChange: ChangeEventHandler;
-	errorMessage: string;
-};
+import { InputFormProps } from "../../types/types";
 
 const InputForm = ({
 	label,
@@ -12,7 +6,6 @@ const InputForm = ({
 	errorMessage,
 	...inputProps
 }: InputFormProps) => {
-	// const { id, label, onChange, errorMessage, ...inputProps } = props;
 	return (
 		<div className="relative z-0 group w-full">
 			<input

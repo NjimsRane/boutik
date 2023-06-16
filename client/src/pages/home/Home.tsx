@@ -1,13 +1,18 @@
-import { Brands, Hero, HomeProducts } from "../../components"
+import { useEffect } from "react";
+import { Brands, Hero, HomeProducts } from "../../components";
 
 const Home = () => {
-  return (
-    <main className="flex flex-col gap-8">
-       <Hero />
-       <Brands />
-       <HomeProducts />
-    </main>
-  )
-}
+	useEffect(() => {
+		document.title = "Home | Boutik";
+	}, []);
 
-export default Home
+	return (
+		<main className="flex flex-col gap-8">
+			<Hero />
+			<Brands />
+			<HomeProducts />
+		</main>
+	);
+};
+
+export default Home;

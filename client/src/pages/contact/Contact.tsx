@@ -1,8 +1,13 @@
 import { BlogTitle } from "../../components";
 import { BsHouse } from "react-icons/bs";
 import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
+import { useEffect } from "react";
 
 const Contact = () => {
+	useEffect(() => {
+		document.title = "Contact | Boutik";
+	}, []);
+
 	return (
 		<section className="px-16 md:px-20 lg:px-36 py-20 ">
 			<div className="mx-auto ">

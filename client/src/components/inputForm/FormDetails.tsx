@@ -1,7 +1,4 @@
-type FormDetailsProps = {
-	title: string;
-	desc: string;
-};
+import { FormDetailsProps } from "../../types/types";
 
 const FormDetails = ({ title, desc }: FormDetailsProps) => {
 	return (

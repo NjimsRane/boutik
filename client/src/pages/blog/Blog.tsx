@@ -1,23 +1,27 @@
 import { BlogPost, BlogGallery, BlogTitle } from "../../components";
 import { blog1, blog2, blog3, blog4, blog5, blog6 } from "../../assets";
 import { gal1, gal2, gal3, gal4, gal5, gal6, gal7 } from "../../assets";
-
-const reveal = () => {
-	const reveals = document.querySelectorAll(".reveal");
-
-	for (let i = 0; i < reveals.length; i++) {
-		const windowHeight = window.innerHeight;
-		const revealTop = reveals[i].getBoundingClientRect().top;
-		const revealPoint = 150;
-		revealTop < windowHeight - revealPoint
-			? reveals[i].classList.add("active")
-			: reveals[i].classList.remove("active");
-	}
-};
-
-window.addEventListener("scroll", reveal);
+import { useEffect } from "react";
 
 const Blog = () => {
+	useEffect(() => {
+		document.title = "Blog | Boutik";
+	}, []);
+
+	const reveal = () => {
+		const reveals = document.querySelectorAll(".reveal");
+
+		for (let i = 0; i < reveals.length; i++) {
+			const windowHeight = window.innerHeight;
+			const revealTop = reveals[i].getBoundingClientRect().top;
+			const revealPoint = 150;
+			revealTop < windowHeight - revealPoint
+				? reveals[i].classList.add("active")
+				: reveals[i].classList.remove("active");
+		}
+	};
+
+	window.addEventListener("scroll", reveal);
 	return (
 		<div className="px-16 md:px-20 lg:px-36 my-8 overflow-hidden flex flex-col gap-8">
 			<div>
