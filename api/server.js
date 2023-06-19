@@ -1,20 +1,14 @@
 import express from 'express';
-import authRouter from './router/auths.js';
-import cookieParser from 'cookie-parser';
+import auhtsRouter from './router/auths.js';
 const app = express();
 
+// middleware
 
-
-// middlewares
 app.use(express.json());
-app.use(cookieParser());
 
-
-app.use('/api/auths', authRouter);
-
-
+app.use('/api/auths', auhtsRouter);
 
 
 app.listen(8080, () => {
-    console.log('Api working');
+    console.log('Backend is connected');
 });
