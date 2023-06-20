@@ -2,7 +2,7 @@
 import * as dotenv from 'dotenv';
 dotenv.config();
 import jwt from 'jsonwebtoken';
-import brcryptjs from 'bcryptjs';
+import bcryptjs from 'bcryptjs';
 import { db } from "../connect.js";
 
 
@@ -13,8 +13,8 @@ const register = (req, res) => {
         if (err) return res.status(500).json(err);
         if (data.length) return res.status(409).json("User already exist!");
 
-        const salt = brcryptjs.genSaltSync(10);
-        const hashedPassword = brcryptjs.hashSync(req.body.password, salt);
+        const salt = bcryptjs.genSaltSync(10);
+        const hashedPassword = bcryptjs.hashSync(req.body.password, salt);
 
         const q = "INSERT INTO clients (client_name, email , password) VALUES(?)";
         const values = [req.body.client_name, req.body.email, hashedPassword];
