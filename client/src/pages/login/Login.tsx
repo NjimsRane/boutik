@@ -80,17 +80,15 @@ const Login = () => {
 				<form
 					action="#"
 					onSubmit={handleSubmit}
-					className="h-[30rem] relative"
+					className="h-[30rem] relative flex flex-col gap-8"
 				>
 					{inputs.map((input) => (
-						<div className="my-8">
-							<InputForm
-								key={input.id}
-								{...input}
-								value={values[inputs.name]}
-								onChange={handleChange}
-							/>
-						</div>
+						<InputForm
+							key={input.id}
+							{...input}
+							value={values[inputs.name]}
+							onChange={handleChange}
+						/>
 					))}
 
 					<div className="flex justify-between items-center capitalize my-8">
@@ -110,7 +108,7 @@ const Login = () => {
 					<div className="text-center absolute bottom-0 left-[50%] -translate-x-[50%]">
 						<span>Don`t have an account ?</span>
 						<Link
-							to="/signup"
+							to="/register"
 							className="font-bold text-[#3056d3] ml-2"
 						>
 							Sign up

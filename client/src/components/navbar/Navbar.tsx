@@ -7,68 +7,48 @@ import { useState } from "react";
 import { useShoppingCart } from "../../context/ProductContext";
 
 const Menu = () => {
+	const menu = [
+		{
+			link: "/",
+			name: "home",
+		},
+		{
+			link: "/products",
+			name: "products",
+		},
+		{
+			link: "/blog",
+			name: "blog",
+		},
+		{
+			link: "/accessories",
+			name: "accessories",
+		},
+		{
+			link: "/shop",
+			name: "shop",
+		},
+		{
+			link: "/contact",
+			name: "contact",
+		},
+	];
+
 	return (
 		<>
-			<NavLink
-				to="/"
-				className={({ isActive }) =>
-					isActive
-						? "text-primary"
-						: "text-secondary duration-500 transition-all hover:text-primary"
-				}
-			>
-				home
-			</NavLink>
-			<NavLink
-				to="/shop"
-				className={({ isActive }) =>
-					isActive
-						? "text-primary"
-						: "text-secondary duration-500 transition-all hover:text-primary"
-				}
-			>
-				shop
-			</NavLink>
-			<NavLink
-				to="/products"
-				className={({ isActive }) =>
-					isActive
-						? "text-primary"
-						: "text-secondary duration-500 transition-all hover:text-primary"
-				}
-			>
-				products
-			</NavLink>
-			<NavLink
-				to="/blog"
-				className={({ isActive }) =>
-					isActive
-						? "text-primary"
-						: "text-secondary duration-500 transition-all hover:text-primary"
-				}
-			>
-				blog
-			</NavLink>
-			<NavLink
-				to="/accessories"
-				className={({ isActive }) =>
-					isActive
-						? "text-primary"
-						: "text-secondary duration-500 transition-all hover:text-primary"
-				}
-			>
-				accessories
-			</NavLink>
-			<NavLink
-				to="/contact"
-				className={({ isActive }) =>
-					isActive
-						? "text-primary"
-						: "text-secondary duration-500 transition-all hover:text-primary"
-				}
-			>
-				contact
-			</NavLink>
+			{menu.map((item, index) => (
+				<NavLink
+					to={item.link}
+					key={index}
+					className={({ isActive }) =>
+						isActive
+							? "text-primary"
+							: "text-secondary duration-500 transition-all hover:text-primary"
+					}
+				>
+					{item.name}
+				</NavLink>
+			))}
 		</>
 	);
 };

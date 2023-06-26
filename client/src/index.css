@@ -93,9 +93,30 @@
 		transition: all 0.5s ease;
 	}
 
-	input:invalid ~ small {
+	input:invalid[focused="true"] {
+		color: crimson;
+	}
+	input:invalid[focused="true"] ~ small {
 		display: block;
 	}
+
+	input:invalid[focused="true"] ~ i {
+		border: 1px solid crimson;
+		height: 2.7rem;
+		background: transparent;
+	}
+	input:invalid[focused="true"] ~ span {
+		color: crimson;
+		top: -2.2rem;
+		margin-inline-start: 0;
+		font-size: 1rem;
+	}
+	/* .soule {
+		position: absolute;
+		background-color: #090e34;
+		z-index: 10;
+		left: 0;
+	} */
 
 	/* BlogPost */
 	.blogPost::-webkit-scrollbar {

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { gal2, facebook, gmail } from "../../assets";
 import { FormDetails, InputForm } from "../../components";
 import { useState, ChangeEvent, useEffect, FormEvent } from "react";
@@ -11,6 +11,7 @@ const Signup = () => {
 		password: "",
 		confirmPassword: "",
 	});
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		document.title = "SignUp | Boutik";
@@ -24,15 +25,17 @@ const Signup = () => {
 			name: "fullname",
 			type: "text",
 			label: "fullname",
-			pattern: "^[A-Za-z0-9]$",
-			errorMessage: "njimoke",
+			required: true,
+			// pattern: "^[A-Za-z0-9]$",
+			errorMessage: "Please enter your full name",
 		},
 		{
 			id: 2,
 			name: "email",
 			type: "email",
 			label: "email",
-			errorMessage: "njimoke",
+			errorMessage: "Enter a valid email format",
+			required: true,
 		},
 		{
 			id: 3,
@@ -41,16 +44,18 @@ const Signup = () => {
 			label: "password",
 			pattern:
 				"^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$^&*])[a-zA-Z0-9!@#$^&*]{8,20}$",
-			errorMessage: "njimoke",
+			errorMessage:
+				"Password should be 8-20 characters and includes at least 1 letter 1 number and 1 special character ",
+			required: true,
 		},
 		{
 			id: 4,
-			name: "confirm password",
+			name: "confirmPassword",
 			type: "password",
 			label: "confirm password",
-			pattern:
-				"^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$^&*])[a-zA-Z0-9!@#$^&*]{8,20}$",
-			errorMessage: "njimoke",
+			pattern: values.password,
+			required: true,
+			errorMessage: "Passwords don`t match",
 		},
 	];
 
@@ -65,12 +70,12 @@ const Signup = () => {
 				"http://localhost:8080/api/auths/register",
 				inputs
 			);
+			navigate("/login");
 		} catch (err) {
 			setErr(err);
 		}
 	};
-
-	// console.log(values);
+	console.log(values);
 
 	return (
 		<div
@@ -90,14 +95,12 @@ const Signup = () => {
 					className="flex flex-col gap-8"
 				>
 					{inputs.map((input) => (
-						<div className="my-2">
-							<InputForm
-								key={input.id}
-								{...input}
-								value={values[input.name]}
-								onChange={hangleChange}
-							/>
-						</div>
+						<InputForm
+							key={input.id}
+							{...input}
+							value={values[input.name]}
+							onChange={hangleChange}
+						/>
 					))}
 
 					<div className="text-right">
@@ -109,6 +112,7 @@ const Signup = () => {
 							login
 						</Link>
 					</div>
+
 					<input
 						type="submit"
 						value="signUp"

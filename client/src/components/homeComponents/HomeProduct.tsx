@@ -2,15 +2,15 @@ import storeItems from "../../data/items.json";
 import { ProductItem } from "../../components";
 
 const HomeProduct = () => {
-	// console.log(storeItems.map(item => item.lists[2]));
-
 	return (
 		<div className="homeProduct">
-			{storeItems.map(item => (
-				<div key={item.lists[2].id}>
-					<ProductItem {...item.lists[0]} />
-				</div>
-			))}
+			{storeItems
+				.filter((item) => item.category === "shirts")
+				.map((item) => (
+					<div key={item.id}>
+						<ProductItem {...item} />
+					</div>
+				))}
 		</div>
 	);
 };

@@ -1,461 +1,479 @@
 [
 	{
-		"category": "shoes",
-		"lists": [
-			{
-				"id": 10,
-				"companyName": "nike",
-				"color": "white",
-				"price": 28,
-				"imgUrl": "/images/shoes/s0.jpg"
-			},
-			{
-				"id": 1,
-				"companyName": "addidas",
-				"color": "black",
-				"price": 20,
-				"imgUrl": "/images/shoes/s1.jpg"
-			},
-			{
-				"id": 2,
-				"companyName": "nike",
-				"color": "red",
-				"price": 25,
-				"imgUrl": "/images/shoes/s5.jpg"
-			},
+		"id": 1,
+		"companyName": "nike",
+		"color": "white",
+		"price": 28,
+		"imgUrl": "/images/shoes/s0.jpg",
+		"category": "shoes"
+	},
+	{
+		"id": 2,
+		"companyName": "addidas",
+		"color": "black",
+		"price": 20,
+		"imgUrl": "/images/shoes/s1.jpg",
+		"category": "shoes"
+	},
+	{
+		"id": 3,
+		"companyName": "nike",
+		"color": "red",
+		"price": 25,
+		"imgUrl": "/images/shoes/s5.jpg",
+		"category": "shoes"
+	},
 
-			{
-				"id": 3,
-				"companyName": "addidas",
-				"color": "red",
-				"price": 23,
-				"imgUrl": "/images/shoes/s21.jpg"
-			},
-			{
-				"id": 4,
-				"companyName": "nike",
-				"color": "white",
-				"price": 24,
-				"imgUrl": "/images/shoes/s6.jpg"
-			},
-			{
-				"id": 5,
-				"companyName": "addidas",
-				"color": "white",
-				"price": 25,
-				"imgUrl": "/images/shoes/s19.jpg"
-			},
-			{
-				"id": 6,
-				"companyName": "zara",
-				"color": "green",
-				"price": 35,
-				"imgUrl": "/images/shoes/s16.jpg"
-			}
-		]
+	{
+		"id": 4,
+		"companyName": "addidas",
+		"color": "red",
+		"price": 23,
+		"imgUrl": "/images/shoes/s21.jpg",
+		"category": "shoes"
 	},
 	{
-		"category": "watches",
-		"lists": [
-			{
-				"id": 70,
-				"companyName": "rolex",
-				"color": "brown",
-				"price": 200,
-				"imgUrl": "/images/watches/w0.jpg"
-			},
-			{
-				"id": 7,
-				"companyName": "rolex",
-				"color": "black",
-				"price": 100,
-				"imgUrl": "/images/watches/w1.jpg"
-			},
-			{
-				"id": 8,
-				"companyName": "Montblanc",
-				"color": "black",
-				"price": 120,
-				"imgUrl": "/images/watches/w2.jpg"
-			},
-			{
-				"id": 9,
-				"companyName": "Jaeger-LeCoultre",
-				"color": "white",
-				"price": 100,
-				"imgUrl": "/images/watches/w3.jpg"
-			},
-			{
-				"id": 10,
-				"companyName": "Audemars Piguet",
-				"color": "silver",
-				"price": 200,
-				"imgUrl": "/images/watches/w4.jpg"
-			},
-			{
-				"id": 11,
-				"companyName": "Frédérique Constant",
-				"color": "silver",
-				"price": 200,
-				"imgUrl": "/images/watches/w5.jpg"
-			},
-			{
-				"id": 12,
-				"companyName": "Cartier",
-				"color": "gray",
-				"price": 250,
-				"imgUrl": "/images/watches/w6.jpg"
-			}
-		]
+		"id": 5,
+		"companyName": "nike",
+		"color": "white",
+		"price": 24,
+		"imgUrl": "/images/shoes/s6.jpg",
+		"category": "shoes"
 	},
 	{
-		"category": "jackets",
-		"lists": [
-			{
-				"id": 13,
-				"companyName": "gucci",
-				"color": "brown",
-				"price": 45,
-				"imgUrl": "/images/jackets/j2.jpg"
-			},
-			{
-				"id": 14,
-				"companyName": "channel",
-				"color": "black",
-				"price": 40,
-				"imgUrl": "/images/jackets/j1.jpg"
-			},
-			{
-				"id": 15,
-				"companyName": "D&G",
-				"color": "gold",
-				"price": 39,
-				"imgUrl": "/images/jackets/j3.jpg"
-			},
-			{
-				"id": 16,
-				"companyName": "nike",
-				"color": "black",
-				"price": 39,
-				"imgUrl": "/images/jackets/j4.jpg"
-			},
-			{
-				"id": 17,
-				"companyName": "gucci",
-				"color": "black",
-				"price": 40,
-				"imgUrl": "/images/jackets/j5.jpg"
-			},
-			{
-				"id": 18,
-				"companyName": "Louis Vuitton",
-				"color": "white",
-				"price": 42,
-				"imgUrl": "/images/jackets/j6.jpg"
-			}
-		]
+		"id": 6,
+		"companyName": "addidas",
+		"color": "white",
+		"price": 25,
+		"imgUrl": "/images/shoes/s19.jpg",
+		"category": "shoes"
 	},
 	{
-		"category": "pullover",
-		"lists": [
-			{
-				"id": 19,
-				"companyName": "zara",
-				"color": "green",
-				"price": 20,
-				"imgUrl": "/images/pull/b2.jpg"
-			},
-			{
-				"id": 20,
-				"companyName": "addidas",
-				"color": "black",
-				"price": 23,
-				"imgUrl": "/images/pull/b3.jpg"
-			},
-			{
-				"id": 21,
-				"companyName": "zara",
-				"color": "gold",
-				"price": 23,
-				"imgUrl": "/images/pull/b4.png"
-			},
-			{
-				"id": 23,
-				"companyName": "gucci",
-				"color": "pink",
-				"price": 23,
-				"imgUrl": "/images/pull/b14.jpg"
-			},
-			{
-				"id": 24,
-				"companyName": "channel",
-				"color": "red",
-				"price": 23,
-				"imgUrl": "/images/pull/b16.jpg"
-			},
-			{
-				"id": 25,
-				"companyName": "puma",
-				"color": "skye-blue",
-				"price": 23,
-				"imgUrl": "/images/pull/b7.jpg"
-			}
-		]
+		"id": 7,
+		"companyName": "zara",
+		"color": "green",
+		"price": 35,
+		"imgUrl": "/images/shoes/s16.jpg",
+		"category": "shoes"
 	},
 	{
-		"category": "trousers",
-		"lists": [
-			{
-				"id": 26,
-				"companyName": "gucci",
-				"color": "white",
-				"price": 19,
-				"imgUrl": "/images/pants/p2.jpg"
-			},
-			{
-				"id": 27,
-				"companyName": "addidas",
-				"color": "gray",
-				"price": 18,
-				"imgUrl": "/images/pants/p1.jpg"
-			},
-			{
-				"id": 28,
-				"companyName": "zara",
-				"color": "red",
-				"price": 14,
-				"imgUrl": "/images/pants/p3.jpg"
-			},
-			{
-				"id": 29,
-				"companyName": "gucci",
-				"color": "grey",
-				"price": 19,
-				"imgUrl": "/images/pants/p4.jpg"
-			},
-			{
-				"id": 30,
-				"companyName": "nike",
-				"color": "brown",
-				"price": 17,
-				"imgUrl": "/images/pants/p5.jpg"
-			},
-			{
-				"id": 31,
-				"companyName": "nike",
-				"color": "black",
-				"price": 15,
-				"imgUrl": "/images/pants/p6.jpg"
-			}
-		]
+		"id": 8,
+		"companyName": "rolex",
+		"color": "brown",
+		"price": 200,
+		"imgUrl": "/images/watches/w0.jpg",
+		"category": "watches"
 	},
 	{
-		"category": "shirts",
-		"lists": [
-			{
-				"id": 32,
-				"companyName": "D&G",
-				"color": "yellow",
-				"price": 21,
-				"imgUrl": "/images/shirts/f1.jpg"
-			},
-			{
-				"id": 33,
-				"companyName": "gucci",
-				"color": "green",
-				"price": 22,
-				"imgUrl": "/images/shirts/f2.jpg"
-			},
-			{
-				"id": 34,
-				"companyName": "channel",
-				"color": "white",
-				"price": 21,
-				"imgUrl": "/images/shirts/f3.jpg"
-			},
-			{
-				"id": 35,
-				"companyName": "zara",
-				"color": "white",
-				"price": 20,
-				"imgUrl": "/images/shirts/f4.jpg"
-			},
-			{
-				"id": 36,
-				"companyName": "zara",
-				"color": "purple",
-				"price": 21,
-				"imgUrl": "/images/shirts/f5.jpg"
-			},
-			{
-				"id": 37,
-				"companyName": "channel",
-				"color": "silver",
-				"price": 20,
-				"imgUrl": "/images/shirts/f6.jpg"
-			}
-		]
+		"id": 9,
+		"companyName": "rolex",
+		"color": "black",
+		"price": 100,
+		"imgUrl": "/images/watches/w1.jpg",
+		"category": "watches"
 	},
 	{
-		"category": "T-shirt",
-		"lists": [
-			{
-				"id": 380,
-				"companyName": "zara",
-				"color": "black",
-				"price": 21,
-				"imgUrl": "/images/t-shirts/t0.jpg"
-			},
-			{
-				"id": 38,
-				"companyName": "D&G",
-				"color": "blue",
-				"price": 21,
-				"imgUrl": "/images/t-shirts/t1.jpg"
-			},
-			{
-				"id": 39,
-				"companyName": "gucci",
-				"color": "purple",
-				"price": 22,
-				"imgUrl": "/images/t-shirts/t2.jpg"
-			},
-			{
-				"id": 40,
-				"companyName": "channel",
-				"color": "gray",
-				"price": 21,
-				"imgUrl": "/images/t-shirts/t3.jpg"
-			},
-			{
-				"id": 42,
-				"companyName": "zara",
-				"color": "white",
-				"price": 20,
-				"imgUrl": "/images/t-shirts/t4.jpg"
-			},
-			{
-				"id": 43,
-				"companyName": "zara",
-				"color": "red",
-				"price": 21,
-				"imgUrl": "/images/t-shirts/t5.jpg"
-			},
-			{
-				"id": 44,
-				"companyName": "channel",
-				"color": "green",
-				"price": 20,
-				"imgUrl": "/images/t-shirts/t6.jpg"
-			}
-		]
+		"id": 10,
+		"companyName": "Montblanc",
+		"color": "black",
+		"price": 120,
+		"imgUrl": "/images/watches/w2.jpg",
+		"category": "watches"
 	},
 	{
-		"category": "accessories",
-		"lists": [
-			{
-				"id": 450,
-				"companyName": "L&G",
-				"color": "black",
-				"price": 50,
-				"imgUrl": "/images/accessories/a0.jpg"
-			},
-			{
-				"id": 45,
-				"companyName": "samsung",
-				"color": "pink",
-				"price": 50,
-				"imgUrl": "/images/accessories/a1.jpg"
-			},
-			{
-				"id": 46,
-				"companyName": "apple",
-				"color": "white",
-				"price": 150,
-				"imgUrl": "/images/accessories/a2.jpg"
-			},
-			{
-				"id": 47,
-				"companyName": "huawey",
-				"color": "black",
-				"price": 150,
-				"imgUrl": "/images/accessories/a3.jpg"
-			},
-			{
-				"id": 48,
-				"companyName": "asus",
-				"color": "silver",
-				"price": 175,
-				"imgUrl": "/images/accessories/a4.jpg"
-			},
-			{
-				"id": 49,
-				"companyName": "samsung",
-				"color": "black",
-				"price": 200,
-				"imgUrl": "/images/accessories/a5.jpg"
-			},
-			{
-				"id": 50,
-				"companyName": "LG",
-				"color": "silver",
-				"price": 300,
-				"imgUrl": "/images/accessories/a6.jpg"
-			}
-		]
+		"id": 11,
+		"companyName": "Jaeger-LeCoultre",
+		"color": "white",
+		"price": 100,
+		"imgUrl": "/images/watches/w3.jpg",
+		"category": "watches"
 	},
 	{
-		"category": "bags",
-		"lists": [
-			{
-				"id": 510,
-				"companyName": "addidas",
-				"color": "black",
-				"price": 100,
-				"imgUrl": "/images/bags/b0.jpg"
-			},
-			{
-				"id": 51,
-				"companyName": "channel",
-				"color": "black",
-				"price": 300,
-				"imgUrl": "/images/bags/b1.jpg"
-			},
-			{
-				"id": 52,
-				"companyName": "zara",
-				"color": "black",
-				"price": 150,
-				"imgUrl": "/images/bags/b2.jpg"
-			},
-			{
-				"id": 53,
-				"companyName": "Louis Vuitton",
-				"color": "blue",
-				"price": 250,
-				"imgUrl": "/images/bags/b3.jpg"
-			},
-			{
-				"id": 54,
-				"companyName": "gucci",
-				"color": "green",
-				"price": 175,
-				"imgUrl": "/images/bags/b4.jpg"
-			},
-			{
-				"id": 55,
-				"companyName": "D&G",
-				"color": "blue",
-				"price": 200,
-				"imgUrl": "/images/bags/b5.jpg"
-			},
-			{
-				"id": 56,
-				"companyName": "zara",
-				"color": "red",
-				"price": 500,
-				"imgUrl": "/images/bags/b6.jpg"
-			}
-		]
+		"id": 12,
+		"companyName": "Audemars Piguet",
+		"color": "silver",
+		"price": 200,
+		"imgUrl": "/images/watches/w4.jpg",
+		"category": "watches"
+	},
+	{
+		"id": 13,
+		"companyName": "Frédérique Constant",
+		"color": "silver",
+		"price": 200,
+		"imgUrl": "/images/watches/w5.jpg",
+		"category": "watches"
+	},
+	{
+		"id": 14,
+		"companyName": "Cartier",
+		"color": "gray",
+		"price": 250,
+		"imgUrl": "/images/watches/w6.jpg",
+		"category": "watches"
+	},
+	{
+		"id": 15,
+		"companyName": "gucci",
+		"color": "brown",
+		"price": 45,
+		"imgUrl": "/images/jackets/j2.jpg",
+		"category": "jackets"
+	},
+	{
+		"id": 16,
+		"companyName": "channel",
+		"color": "black",
+		"price": 40,
+		"imgUrl": "/images/jackets/j1.jpg",
+		"category": "jackets"
+	},
+	{
+		"id": 17,
+		"companyName": "D&G",
+		"color": "gold",
+		"price": 39,
+		"imgUrl": "/images/jackets/j3.jpg",
+		"category": "jackets"
+	},
+	{
+		"id": 18,
+		"companyName": "nike",
+		"color": "black",
+		"price": 39,
+		"imgUrl": "/images/jackets/j4.jpg",
+		"category": "jackets"
+	},
+	{
+		"id": 19,
+		"companyName": "gucci",
+		"color": "black",
+		"price": 40,
+		"imgUrl": "/images/jackets/j5.jpg",
+		"category": "jackets"
+	},
+	{
+		"id": 20,
+		"companyName": "Louis Vuitton",
+		"color": "white",
+		"price": 42,
+		"imgUrl": "/images/jackets/j6.jpg",
+		"category": "jackets"
+	},
+	{
+		"id": 21,
+		"companyName": "zara",
+		"color": "green",
+		"price": 20,
+		"imgUrl": "/images/pull/b2.jpg",
+		"category": "pullover"
+	},
+	{
+		"id": 22,
+		"companyName": "addidas",
+		"color": "black",
+		"price": 23,
+		"imgUrl": "/images/pull/b3.jpg",
+		"category": "pullover"
+	},
+	{
+		"id": 23,
+		"companyName": "zara",
+		"color": "gold",
+		"price": 23,
+		"imgUrl": "/images/pull/b4.png",
+		"category": "pullover"
+	},
+	{
+		"id": 24,
+		"companyName": "gucci",
+		"color": "pink",
+		"price": 23,
+		"imgUrl": "/images/pull/b14.jpg",
+		"category": "pullover"
+	},
+	{
+		"id": 25,
+		"companyName": "channel",
+		"color": "red",
+		"price": 23,
+		"imgUrl": "/images/pull/b16.jpg",
+		"category": "pullover"
+	},
+	{
+		"id": 26,
+		"companyName": "puma",
+		"color": "skye-blue",
+		"price": 23,
+		"imgUrl": "/images/pull/b7.jpg",
+		"category": "pullover"
+	},
+
+	{
+		"id": 27,
+		"companyName": "gucci",
+		"color": "white",
+		"price": 19,
+		"imgUrl": "/images/pants/p2.jpg",
+		"category": "trousers"
+	},
+	{
+		"id": 28,
+		"companyName": "addidas",
+		"color": "gray",
+		"price": 18,
+		"imgUrl": "/images/pants/p1.jpg",
+		"category": "trousers"
+	},
+	{
+		"id": 29,
+		"companyName": "zara",
+		"color": "red",
+		"price": 14,
+		"imgUrl": "/images/pants/p3.jpg",
+		"category": "trousers"
+	},
+	{
+		"id": 30,
+		"companyName": "gucci",
+		"color": "grey",
+		"price": 19,
+		"imgUrl": "/images/pants/p4.jpg",
+		"category": "trousers"
+	},
+	{
+		"id": 31,
+		"companyName": "nike",
+		"color": "brown",
+		"price": 17,
+		"imgUrl": "/images/pants/p5.jpg",
+		"category": "trousers"
+	},
+	{
+		"id": 32,
+		"companyName": "nike",
+		"color": "black",
+		"price": 15,
+		"imgUrl": "/images/pants/p6.jpg",
+		"category": "trousers"
+	},
+
+	{
+		"id": 33,
+		"companyName": "D&G",
+		"color": "yellow",
+		"price": 21,
+		"imgUrl": "/images/shirts/f1.jpg",
+		"category": "shirts"
+	},
+	{
+		"id": 34,
+		"companyName": "gucci",
+		"color": "green",
+		"price": 22,
+		"imgUrl": "/images/shirts/f2.jpg",
+		"category": "shirts"
+	},
+	{
+		"id": 35,
+		"companyName": "channel",
+		"color": "white",
+		"price": 21,
+		"imgUrl": "/images/shirts/f3.jpg",
+		"category": "shirts"
+	},
+	{
+		"id": 36,
+		"companyName": "zara",
+		"color": "white",
+		"price": 20,
+		"imgUrl": "/images/shirts/f4.jpg",
+		"category": "shirts"
+	},
+	{
+		"id": 37,
+		"companyName": "zara",
+		"color": "purple",
+		"price": 21,
+		"imgUrl": "/images/shirts/f5.jpg",
+		"category": "shirts"
+	},
+	{
+		"id": 38,
+		"companyName": "channel",
+		"color": "silver",
+		"price": 20,
+		"imgUrl": "/images/shirts/f6.jpg",
+		"category": "shirts"
+	},
+
+	{
+		"id": 39,
+		"companyName": "zara",
+		"color": "black",
+		"price": 21,
+		"imgUrl": "/images/t-shirts/t0.jpg",
+		"category": "T-shirt"
+	},
+	{
+		"id": 40,
+		"companyName": "D&G",
+		"color": "blue",
+		"price": 21,
+		"imgUrl": "/images/t-shirts/t1.jpg",
+		"category": "T-shirt"
+	},
+	{
+		"id": 41,
+		"companyName": "gucci",
+		"color": "purple",
+		"price": 22,
+		"imgUrl": "/images/t-shirts/t2.jpg",
+		"category": "T-shirt"
+	},
+	{
+		"id": 42,
+		"companyName": "channel",
+		"color": "gray",
+		"price": 21,
+		"imgUrl": "/images/t-shirts/t3.jpg",
+		"category": "T-shirt"
+	},
+	{
+		"id": 43,
+		"companyName": "zara",
+		"color": "white",
+		"price": 20,
+		"imgUrl": "/images/t-shirts/t4.jpg",
+		"category": "T-shirt"
+	},
+	{
+		"id": 44,
+		"companyName": "zara",
+		"color": "red",
+		"price": 21,
+		"imgUrl": "/images/t-shirts/t5.jpg",
+		"category": "T-shirt"
+	},
+	{
+		"id": 45,
+		"companyName": "channel",
+		"color": "green",
+		"price": 20,
+		"imgUrl": "/images/t-shirts/t6.jpg",
+		"category": "T-shirt"
+	},
+	{
+		"id": 46,
+		"companyName": "L&G",
+		"color": "black",
+		"price": 50,
+		"imgUrl": "/images/accessories/a0.jpg",
+		"category": "accessories"
+	},
+	{
+		"id": 47,
+		"companyName": "samsung",
+		"color": "pink",
+		"price": 50,
+		"imgUrl": "/images/accessories/a1.jpg",
+		"category": "accessories"
+	},
+	{
+		"id": 48,
+		"companyName": "apple",
+		"color": "white",
+		"price": 150,
+		"imgUrl": "/images/accessories/a2.jpg",
+		"category": "accessories"
+	},
+	{
+		"id": 49,
+		"companyName": "huawey",
+		"color": "black",
+		"price": 150,
+		"imgUrl": "/images/accessories/a3.jpg",
+		"category": "accessories"
+	},
+	{
+		"id": 50,
+		"companyName": "asus",
+		"color": "silver",
+		"price": 175,
+		"imgUrl": "/images/accessories/a4.jpg",
+		"category": "accessories"
+	},
+	{
+		"id": 51,
+		"companyName": "samsung",
+		"color": "black",
+		"price": 200,
+		"imgUrl": "/images/accessories/a5.jpg",
+		"category": "accessories"
+	},
+	{
+		"id": 52,
+		"companyName": "LG",
+		"color": "silver",
+		"price": 300,
+		"imgUrl": "/images/accessories/a6.jpg",
+		"category": "accessories"
+	},
+
+	{
+		"id": 53,
+		"companyName": "addidas",
+		"color": "black",
+		"price": 100,
+		"imgUrl": "/images/bags/b0.jpg",
+		"category": "bags"
+	},
+	{
+		"id": 54,
+		"companyName": "channel",
+		"color": "black",
+		"price": 300,
+		"imgUrl": "/images/bags/b1.jpg",
+		"category": "bags"
+	},
+	{
+		"id": 55,
+		"companyName": "zara",
+		"color": "black",
+		"price": 150,
+		"imgUrl": "/images/bags/b2.jpg",
+		"category": "bags"
+	},
+	{
+		"id": 56,
+		"companyName": "Louis Vuitton",
+		"color": "blue",
+		"price": 250,
+		"imgUrl": "/images/bags/b3.jpg",
+		"category": "bags"
+	},
+	{
+		"id": 57,
+		"companyName": "gucci",
+		"color": "green",
+		"price": 175,
+		"imgUrl": "/images/bags/b4.jpg",
+		"category": "bags"
+	},
+	{
+		"id": 58,
+		"companyName": "D&G",
+		"color": "blue",
+		"price": 200,
+		"imgUrl": "/images/bags/b5.jpg",
+		"category": "bags"
+	},
+	{
+		"id": 59,
+		"companyName": "zara",
+		"color": "red",
+		"price": 500,
+		"imgUrl": "/images/bags/b6.jpg",
+		"category": "bags"
 	}
 ]

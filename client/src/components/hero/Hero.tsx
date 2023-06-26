@@ -27,7 +27,7 @@ const Hero = () => {
 					enim quos. Atque voluptatibus hic dignissimos minima?
 				</p>
 				<button className="btn">
-					<Link to="/">shop now</Link>
+					<Link to="/products">shop now</Link>
 				</button>
 			</div>
 

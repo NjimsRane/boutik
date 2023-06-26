@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { BlogTitle, ProductItem } from "../../components";
-import FilterBtn from "../../components/products/FilterBtn";
+// import FilterBtn from "../../components/products/FilterBtn";
 import storeItems from "../../data/items.json";
 
 const Products = () => {
-	const [selectedProducts, setSelectedProducts] = useState([]);
-	const [filteredProducts, setFilteredProducts] = useState(storeItems);
+	// const [selectedProducts, setSelectedProducts] = useState([]);
+	// const [filteredProducts, setFilteredProducts] = useState(storeItems);
 
 	const filters = [
 		"shoes",
@@ -18,27 +18,27 @@ const Products = () => {
 		"jackets",
 		"accessories",
 	];
-	console.log(filteredProducts.map((product) => product.category));
+	// console.log(filteredProducts.map((product) => product.category));
 
-	const handleFilterButton = (selectedCategory) => {
-		if (selectedProducts.includes(selectedCategory)) {
-			let filters = selectedProducts.filter(
-				(el) => el !== selectedCategory
-			);
-			setSelectedProducts(filters);
-		} else {
-			setSelectedProducts([...selectedProducts, selectedCategory]);
-		}
-	};
+	// const handleFilterButton = (selectedCategory) => {
+	// 	if (selectedProducts.includes(selectedCategory)) {
+	// 		let filters = selectedProducts.filter(
+	// 			(el) => el !== selectedCategory
+	// 		);
+	// 		setSelectedProducts(filters);
+	// 	} else {
+	// 		setSelectedProducts([...selectedProducts, selectedCategory]);
+	// 	}
+	// };
 
 	// const filtersItems = () => {
 	// 	if (selectedProducts.length > 0) {
 	// 	}
 	// };
 
-	useEffect(() => {
-		// filtersItems();
-	}, [selectedProducts]);
+	// useEffect(() => {
+	// 	// filtersItems();
+	// }, [selectedProducts]);
 
 	useEffect(() => {
 		document.title = "Products | Boutik";
@@ -50,22 +50,20 @@ const Products = () => {
 			<div className="flex items-center justify-center gap-4 flex-wrap my-16">
 				{filters.map((filter, index) => (
 					<>
-						<FilterBtn
+						{/* <FilterBtn
 							key={index}
 							title={filter}
-							onChange={handleFilterButton}
-						/>
+							// onChange={handleFilterButton}
+						/> */}
 					</>
 				))}
 			</div>
 			<div className="homeProduct">
-				{storeItems.map((item) =>
-					item.lists.map((item) => (
-						<div key={item.id}>
-							<ProductItem {...item} />
-						</div>
-					))
-				)}
+				{storeItems.map((item) => (
+					<div key={item.id}>
+						<ProductItem {...item} />
+					</div>
+				))}
 			</div>
 		</div>
 	);

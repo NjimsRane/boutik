@@ -1,21 +1,23 @@
-import { blog1, blog2, blog3, blog4, blog5 } from "../../assets";
-import { BlogTitle, ProductItem } from "../../components";
-import formatCurrency from "../../utilities/formatCurrency";
-import storeItems from "../../data/items.json";
-import { useEffect } from "react";
-
+import { useParams } from "react-router-dom";
 import { useShoppingCart } from "../../context/ProductContext";
-// import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { blog2, blog3, blog4, blog5 } from "../../assets";
+import formatCurrency from "../../utilities/formatCurrency";
+import { BlogTitle, ProductItem } from "../../components";
+import storeItems from "../../data/items.json";
 
-const Shop = () => {
+const Product = () => {
 	const { increaseCartQuantity } = useShoppingCart();
 	const { id } = useParams();
-	// const soule = storeItems.map((item) =>
-	// 	item.lists.map((item) => item.companyName)
-	// );
+
+	const product = storeItems.find((item) => {
+		return item.id === Number(id);
+	});
+
+	const { companyName, price, imgUrl, category } = product;
 
 	useEffect(() => {
-		document.title = "Shop | Boutik";
+		document.title = "Product | Boutik";
 	}, []);
 
 	return (
@@ -23,9 +25,9 @@ const Shop = () => {
 			<div className="flex flex-col lg:flex-row gap-8 my-8 px-16 md:px-36 lg:px-80">
 				<div className="flex-1">
 					<img
-						src={blog1}
-						alt=""
-						className="w-full object-cover"
+						src={imgUrl}
+						alt={category}
+						className="w-full object-cover h-[30rem]"
 					/>
 					<div className="flex justify-between mt-4">
 						<div className="smallImg">
@@ -59,20 +61,16 @@ const Shop = () => {
 					</div>
 				</div>
 				<div className="flex-1 flex flex-col gap-4 px-4">
-					<h6 className="text-tertiary text-xl">Home / T-Shirt</h6>
-					<h3 className="py-4 text-secondary font-semibold text-2xl">
-						Men`s Fashion T Shirt
+					<h6 className="text-tertiary text-xl capitalize">
+						<span>{companyName}</span>
+					</h6>
+					<h3 className="py-4 text-secondary font-semibold text-3xl capitalize">
+						{category}
 					</h3>
 					<h2 className="text-secondary font-bold text-4xl capitalize">
-						{formatCurrency(149)}
+						{formatCurrency(price)}
 					</h2>
 					<div>
-						<input
-							type="number"
-							name="quantity"
-							id="quantity"
-							className="w-[4rem] h-[2.5rem] text-xl px-1 mr-4 border outline-none"
-						/>
 						<button
 							className="bg-primary p-2 rounded-md text-lg w-[10rem]  text-white uppercase mt-4 transition-all duration-500 hover:bg-[#212B36] "
 							onClick={() => increaseCartQuantity(id)}
@@ -99,15 +97,17 @@ const Shop = () => {
 				</div>
 
 				<div className="homeProduct my-8">
-					{storeItems.map((item) => (
-						<div key={item.lists[0].id}>
-							<ProductItem {...item.lists[0]} />
-						</div>
-					))}
+					{storeItems
+						.filter((item) => item.category === `${category}`)
+						.map((item) => (
+							<div key={item.id}>
+								<ProductItem {...item} />
+							</div>
+						))}
 				</div>
 			</div>
 		</div>
 	);
 };
 
-export default Shop;
+export default Product;

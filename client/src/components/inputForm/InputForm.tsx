@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { InputFormProps } from "../../types/types";
 
 const InputForm = ({
@@ -6,22 +7,29 @@ const InputForm = ({
 	errorMessage,
 	...inputProps
 }: InputFormProps) => {
+	const [focused, setFocused] = useState(false);
+
+	const handlefocused = () => {
+		setFocused(true);
+	};
+
 	return (
-		<div className="relative z-0 group w-full">
+		<div className="w-full relative mt-8">
 			<input
-				className="block w-full py-3 px-2 text-lg bg-transparent appearance-none focus:outline-none z-10 text-white peer"
+				className="relative bg-transparent w-full text-white outline-none peer p-2 z-10"
 				{...inputProps}
 				onChange={onChange}
-				id={label}
+				onBlur={handlefocused}
+				focused={focused.toString()}
+				// onFocus={() =>
+				// 	inputsProps.name === "confirmPassword" && setFocused(true)
+				// }
 			/>
-			<label
-				htmlFor={label}
-				className="absolute text-xl text-tertiary capitalize tracking-wider font-semibold duration-300 transition-all transform origin-[0] -translate-y-0 top-3 px-2 -z-10 peer-placeholder-shown:translate-y-0 peer-focus:text-primary peer-focus:-translate-y-7 peer-focus:text-base peer-focus:left-0 peer-focus:px-0 peer-valid:text-primary peer-valid:-translate-y-7 peer-valid:text-base peer-valid:left-0 peer-valid:px-0 peer-invalid:text-[crimson]"
-			>
+			<span className="absolute left-0 top-0 capitalize text-xl text-primary w-full p-2 transition-all duration-500  peer-focus:-top-7  peer-focus:px-0 peer-focus:text-tertiary peer-focus:text-base  peer-valid:-top-7  peer-valid:px-0 peer-valid:text-tertiary peer-valid:text-base ">
 				{label}
-			</label>
-			<i className="absolute bottom-0 bg-primary w-full h-[2px] transition-all duration-500 rounded peer-focus:h-[2.8rem] peer-valid:h-[2.8rem] peer-invalid:bg-[crimson] -z-[9]"></i>
-			<small className="text-[crimson] capitalize px-2 tracking-wide hidden peer-focus:in absolute -bottom-4">
+			</span>
+			<i className="absolute left-0 bottom-0 w-full rounded bg-primary h-[0.12rem] transition-all duration-500 peer-focus:h-10 peer-valid:h-10"></i>
+			<small className="text-red-500 px-2 absolute left-0 top-10 hidden">
 				{errorMessage}
 			</small>
 		</div>

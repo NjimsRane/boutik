@@ -8,6 +8,7 @@ const Home = lazy(() => import("./pages/home/Home"));
 const Shop = lazy(() => import("./pages/shop/Shop"));
 const Contact = lazy(() => import("./pages/contact/Contact"));
 const Products = lazy(() => import("./pages/products/Products"));
+const Product = lazy(() => import("./pages/products/Product"));
 const Blog = lazy(() => import("./pages/blog/Blog"));
 const Accessories = lazy(() => import("./pages/accessories/Accessories"));
 
@@ -48,6 +49,10 @@ const App = () => {
 					element={<Products />}
 				/>
 				<Route
+					path="/products/:id"
+					element={<Product />}
+				/>
+				<Route
 					path="/blog"
 					element={<Blog />}
 				/>
@@ -65,7 +70,7 @@ const App = () => {
 				element={<Login />}
 			/>
 			<Route
-				path="/signup"
+				path="/register"
 				element={<Signup />}
 			/>
 			<Route

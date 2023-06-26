@@ -33,8 +33,7 @@ const Contact = () => {
 										Our Location
 									</h4>
 									<p className="text-xl text-tertiary">
-										99 S.t Jomblo Park Pekanbaru 28292.
-										Indonesia
+										99 S.t Yaounde, Cameroon
 									</p>
 								</div>
 							</div>
@@ -46,7 +45,7 @@ const Contact = () => {
 										Phone Number
 									</h4>
 									<p className="text-xl text-tertiary">
-										(+62)81 414 257 9980
+										(+237)81 414 257 9980
 									</p>
 								</div>
 							</div>

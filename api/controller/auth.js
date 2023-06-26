@@ -11,19 +11,20 @@ const register = (req, res) => {
 
     db.query(q, [req.body.client_name], (err, data) => {
         if (err) return res.status(500).json(err);
-        if (data.length) return res.status(409).json("User already exist!");
+        if (data.length) return res.status(409).json('User already exist!');
 
         const salt = bcryptjs.genSaltSync(10);
         const hashedPassword = bcryptjs.hashSync(req.body.password, salt);
 
-        const q = "INSERT INTO clients (client_name, email , password) VALUES(?)";
+        const q = "INSERT INTO clients (client_name , email , password) VALUES(?) ";
         const values = [req.body.client_name, req.body.email, hashedPassword];
 
         db.query(q, [values], (err, data) => {
             if (err) return res.status(500).json(err);
-            return res.status(200).json("User has been created!");
+            return res.status(200).json('User has been created!');
         });
     });
+
 };
 
 const login = (req, res) => {

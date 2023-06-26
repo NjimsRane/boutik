@@ -32,7 +32,7 @@ const HeroComponents = ({
 				</h2>
 				<Link
 					className="capitalize text-2xl font-semibold text-right block duration-500 transition-all hover:text-primary"
-					to="/shop"
+					to="/"
 				>
 					{link}
 				</Link>
