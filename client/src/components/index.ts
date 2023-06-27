@@ -24,5 +24,8 @@ export { default as ProductItem } from "./products/ProductItem";
 export { default as InputForm } from "./inputForm/InputForm";
 export { default as FormDetails } from "./inputForm/FormDetails";
 
+// testimonial
+export { default as Testimonial } from "./testimonial/Testimonial";
+
 // footer
 export { default as FooterComponent } from "./footerComponents/FooterComponent";

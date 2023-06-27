@@ -50,6 +50,3 @@ export { default as twitter } from "./images/Social-media/twitter.png";
 export { default as instagram } from "./images/Social-media/instagram.png";
 export { default as youtube } from "./images/Social-media/youtube.png";
 export { default as gmail } from "./images/Social-media/gmail.png";
-
-// loginRegister
-export { default as img1 } from "./images/loginRegister/2.jpg";
